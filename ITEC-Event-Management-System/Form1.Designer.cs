@@ -32,7 +32,7 @@
             this.LeftPicture = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.ITECHeading = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPicture)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.Controls.Add(this.UsernameTextBox);
+            this.TopPanel.Controls.Add(this.textBox1);
             this.TopPanel.Controls.Add(this.ITECHeading);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.TopPanel.Location = new System.Drawing.Point(867, 0);
@@ -83,13 +83,12 @@
             this.ITECHeading.TabIndex = 0;
             this.ITECHeading.Text = "ITEC Manager";
             // 
-            // UsernameTextBox
+            // textBox1
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(390, 432);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(524, 38);
-            this.UsernameTextBox.TabIndex = 1;
-            this.UsernameTextBox.Text = "sdgdg";
+            this.textBox1.Location = new System.Drawing.Point(211, 338);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(735, 38);
+            this.textBox1.TabIndex = 1;
             // 
             // Login
             // 
@@ -116,7 +115,7 @@
         private System.Windows.Forms.PictureBox LeftPicture;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Label ITECHeading;
-        private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
