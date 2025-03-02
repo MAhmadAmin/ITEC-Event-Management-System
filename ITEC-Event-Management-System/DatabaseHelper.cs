@@ -51,7 +51,7 @@ namespace ITEC_Event_Management_System
 
         }
 
-        public int Update(string query)
+        public int ExecuteQuery(string query)
         {
             using (var connection = getConnection())
             {

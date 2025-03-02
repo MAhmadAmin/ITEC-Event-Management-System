@@ -52,6 +52,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.UsernameErrorLabel = new System.Windows.Forms.Label();
+            this.EmailErrorLabel = new System.Windows.Forms.Label();
+            this.PasswordErrorLabel = new System.Windows.Forms.Label();
             this.DataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.InfoPanel.SuspendLayout();
@@ -82,13 +85,14 @@
             this.SignupButton.TabIndex = 6;
             this.SignupButton.Text = "Sign up";
             this.SignupButton.UseVisualStyleBackColor = false;
+            this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click);
             // 
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.Chocolate;
             this.LoginButton.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.Transparent;
-            this.LoginButton.Location = new System.Drawing.Point(19, 44);
+            this.LoginButton.Location = new System.Drawing.Point(34, 44);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(214, 54);
             this.LoginButton.TabIndex = 7;
@@ -106,6 +110,7 @@
             this.PasswordTextBox.Size = new System.Drawing.Size(370, 28);
             this.PasswordTextBox.TabIndex = 3;
             this.PasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTextBox_KeyDown);
+            this.PasswordTextBox.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
             // 
             // LogInLabel
             // 
@@ -128,12 +133,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.Black;
-            this.PasswordLabel.Location = new System.Drawing.Point(91, 257);
+            this.PasswordLabel.Location = new System.Drawing.Point(122, 263);
             this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(134, 35);
+            this.PasswordLabel.Size = new System.Drawing.Size(118, 29);
             this.PasswordLabel.TabIndex = 0;
             this.PasswordLabel.Text = "Password:";
             // 
@@ -155,12 +160,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.Black;
-            this.UsernameLabel.Location = new System.Drawing.Point(87, 134);
+            this.UsernameLabel.Location = new System.Drawing.Point(116, 138);
             this.UsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(138, 33);
+            this.UsernameLabel.Size = new System.Drawing.Size(124, 29);
             this.UsernameLabel.TabIndex = 0;
             this.UsernameLabel.Text = "Username:";
             // 
@@ -183,6 +188,9 @@
             // 
             this.DataPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DataPanel.Controls.Add(this.ToggleShowPassword);
+            this.DataPanel.Controls.Add(this.PasswordErrorLabel);
+            this.DataPanel.Controls.Add(this.EmailErrorLabel);
+            this.DataPanel.Controls.Add(this.UsernameErrorLabel);
             this.DataPanel.Controls.Add(this.ErrorLabel);
             this.DataPanel.Controls.Add(this.SignupRole);
             this.DataPanel.Controls.Add(this.SignupButton);
@@ -196,7 +204,7 @@
             this.DataPanel.Controls.Add(this.ConfirmPasswordLabel);
             this.DataPanel.Controls.Add(this.AccountTypeLabel);
             this.DataPanel.Controls.Add(this.PasswordLabel);
-            this.DataPanel.Location = new System.Drawing.Point(84, 97);
+            this.DataPanel.Location = new System.Drawing.Point(53, 112);
             this.DataPanel.Name = "DataPanel";
             this.DataPanel.Size = new System.Drawing.Size(654, 577);
             this.DataPanel.TabIndex = 3;
@@ -204,11 +212,11 @@
             // ToggleShowPassword
             // 
             this.ToggleShowPassword.AutoSize = true;
-            this.ToggleShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToggleShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToggleShowPassword.ForeColor = System.Drawing.Color.Red;
-            this.ToggleShowPassword.Location = new System.Drawing.Point(472, 366);
+            this.ToggleShowPassword.Location = new System.Drawing.Point(479, 389);
             this.ToggleShowPassword.Name = "ToggleShowPassword";
-            this.ToggleShowPassword.Size = new System.Drawing.Size(142, 20);
+            this.ToggleShowPassword.Size = new System.Drawing.Size(129, 20);
             this.ToggleShowPassword.TabIndex = 9;
             this.ToggleShowPassword.Text = "Show Password";
             this.ToggleShowPassword.Click += new System.EventHandler(this.ToggleShowPassword_Click);
@@ -272,12 +280,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailLabel.ForeColor = System.Drawing.Color.Black;
-            this.EmailLabel.Location = new System.Drawing.Point(133, 198);
+            this.EmailLabel.Location = new System.Drawing.Point(159, 202);
             this.EmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(94, 35);
+            this.EmailLabel.Size = new System.Drawing.Size(81, 29);
             this.EmailLabel.TabIndex = 0;
             this.EmailLabel.Text = "Email: ";
             // 
@@ -287,12 +295,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfirmPasswordLabel.AutoSize = true;
-            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPasswordLabel.ForeColor = System.Drawing.Color.Black;
-            this.ConfirmPasswordLabel.Location = new System.Drawing.Point(2, 320);
+            this.ConfirmPasswordLabel.Location = new System.Drawing.Point(36, 325);
             this.ConfirmPasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
-            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(225, 33);
+            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(204, 29);
             this.ConfirmPasswordLabel.TabIndex = 0;
             this.ConfirmPasswordLabel.Text = "Confirm Password:";
             // 
@@ -302,14 +310,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AccountTypeLabel.AutoSize = true;
-            this.AccountTypeLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountTypeLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccountTypeLabel.ForeColor = System.Drawing.Color.Black;
-            this.AccountTypeLabel.Location = new System.Drawing.Point(96, 379);
+            this.AccountTypeLabel.Location = new System.Drawing.Point(85, 383);
             this.AccountTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AccountTypeLabel.Name = "AccountTypeLabel";
-            this.AccountTypeLabel.Size = new System.Drawing.Size(125, 35);
+            this.AccountTypeLabel.Size = new System.Drawing.Size(154, 29);
             this.AccountTypeLabel.TabIndex = 0;
-            this.AccountTypeLabel.Text = "Acc Type:";
+            this.AccountTypeLabel.Text = "Account Type:";
             // 
             // label1
             // 
@@ -346,7 +354,7 @@
             this.InfoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.InfoPanel.Controls.Add(this.pictureBox1);
             this.InfoPanel.Controls.Add(this.label1);
-            this.InfoPanel.Location = new System.Drawing.Point(781, 219);
+            this.InfoPanel.Location = new System.Drawing.Point(769, 159);
             this.InfoPanel.Name = "InfoPanel";
             this.InfoPanel.Size = new System.Drawing.Size(308, 273);
             this.InfoPanel.TabIndex = 8;
@@ -356,10 +364,61 @@
             this.LoginPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LoginPanel.Controls.Add(this.LogInLabel);
             this.LoginPanel.Controls.Add(this.LoginButton);
-            this.LoginPanel.Location = new System.Drawing.Point(800, 557);
+            this.LoginPanel.Location = new System.Drawing.Point(798, 529);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(256, 101);
             this.LoginPanel.TabIndex = 9;
+            // 
+            // UsernameErrorLabel
+            // 
+            this.UsernameErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsernameErrorLabel.AutoSize = true;
+            this.UsernameErrorLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.UsernameErrorLabel.Location = new System.Drawing.Point(444, 171);
+            this.UsernameErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsernameErrorLabel.Name = "UsernameErrorLabel";
+            this.UsernameErrorLabel.Size = new System.Drawing.Size(170, 21);
+            this.UsernameErrorLabel.TabIndex = 8;
+            this.UsernameErrorLabel.Text = "This user already exists";
+            this.UsernameErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.UsernameErrorLabel.Visible = false;
+            // 
+            // EmailErrorLabel
+            // 
+            this.EmailErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmailErrorLabel.AutoSize = true;
+            this.EmailErrorLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.EmailErrorLabel.Location = new System.Drawing.Point(458, 235);
+            this.EmailErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.EmailErrorLabel.Name = "EmailErrorLabel";
+            this.EmailErrorLabel.Size = new System.Drawing.Size(150, 21);
+            this.EmailErrorLabel.TabIndex = 8;
+            this.EmailErrorLabel.Text = "Invalid email format";
+            this.EmailErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.EmailErrorLabel.Visible = false;
+            // 
+            // PasswordErrorLabel
+            // 
+            this.PasswordErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PasswordErrorLabel.AutoSize = true;
+            this.PasswordErrorLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.PasswordErrorLabel.Location = new System.Drawing.Point(424, 357);
+            this.PasswordErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PasswordErrorLabel.Name = "PasswordErrorLabel";
+            this.PasswordErrorLabel.Size = new System.Drawing.Size(190, 21);
+            this.PasswordErrorLabel.TabIndex = 8;
+            this.PasswordErrorLabel.Text = "Password does not match";
+            this.PasswordErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.PasswordErrorLabel.Visible = false;
             // 
             // Signup
             // 
@@ -372,6 +431,7 @@
             this.Controls.Add(this.ITECHeading);
             this.Name = "Signup";
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.Signup_Load);
             this.DataPanel.ResumeLayout(false);
             this.DataPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -409,5 +469,8 @@
         private System.Windows.Forms.Label ToggleShowPassword;
         private System.Windows.Forms.Panel InfoPanel;
         private System.Windows.Forms.Panel LoginPanel;
+        private System.Windows.Forms.Label UsernameErrorLabel;
+        private System.Windows.Forms.Label PasswordErrorLabel;
+        private System.Windows.Forms.Label EmailErrorLabel;
     }
 }

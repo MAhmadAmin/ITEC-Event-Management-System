@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using MySqlX.XDevAPI;
 
 namespace ITEC_Event_Management_System
 {
@@ -29,12 +30,13 @@ namespace ITEC_Event_Management_System
 
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
         {
-            ErrorLabel.Text = "";
+            UsernameErrorLabel.Hide();
         }
 
         private void Signup_closed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Login login = new Login();
+            login.Show();
         }
 
         private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -88,37 +90,44 @@ namespace ITEC_Event_Management_System
             var reader = DatabaseHelper.Instance.getData(query);
             return reader.Read();
         }
+        private bool EmailExists(string inputEmail)
+        {
+            string query = $"SELECT * FROM Users WHERE email = '{inputEmail}'";
+            var reader = DatabaseHelper.Instance.getData(query);
+            return reader.Read();
+        }
 
         private void UsernameTextBox_Leave(object sender, EventArgs e)
         {
-            string username = UsernameTextBox.Text;
+            string username = UsernameTextBox.Text.ToLower();
             if (UserExists(username))
             {
-                ErrorLabel.ForeColor = Color.Red;
-                ErrorLabel.Text = "Username already exists";
-                UsernameLabel.ForeColor = Color.Red;
+                UsernameErrorLabel.Show();
             }
             else
             {
-                ErrorLabel.Text = "";
-                UsernameLabel.ForeColor = Color.Black;
+                UsernameErrorLabel.Hide();
             }
         }
 
 
         private void EmailTextBox_Leave(object sender, EventArgs e)
         {
-        string email = EmailTextBox.Text;
+            string email = EmailTextBox.Text.ToLower();
             if (!IsValidEmail(email))
             {
-                ErrorLabel.ForeColor = Color.Red;
-                ErrorLabel.Text = "Invalid email format";
-                EmailLabel.ForeColor = Color.Red;
+                EmailErrorLabel.Text = "Invalid email format";
+                EmailErrorLabel.Show();
+            }
+
+            else if (EmailExists(email))
+            {
+                EmailErrorLabel.Text = "Email already used";
+                EmailErrorLabel.Show();
             }
             else
             {
-                ErrorLabel.Text = "";
-                EmailLabel.ForeColor = Color.Black;
+                EmailErrorLabel.Hide();
             }
         }
 
@@ -134,23 +143,18 @@ namespace ITEC_Event_Management_System
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            ErrorLabel.Text = "";
+            EmailErrorLabel.Hide();
         }
 
         private void ConfirmPasswordTextBox_Leave(object sender, EventArgs e)
         {
             if (PasswordTextBox.Text != ConfirmPasswordTextBox.Text)
             {
-                ErrorLabel.ForeColor = Color.Red;
-                ErrorLabel.Text = "Passwords do not match";
-                //PasswordLabel.ForeColor = Color.Red;
-                ConfirmPasswordLabel.ForeColor = Color.Red;
+                PasswordErrorLabel.Show();
             }
             else
             {
-                ErrorLabel.Text = "";
-                //PasswordLabel.ForeColor = Color.Black;
-                ConfirmPasswordLabel.ForeColor = Color.Black;
+                PasswordErrorLabel.Hide();
             }
         }
 
@@ -169,6 +173,103 @@ namespace ITEC_Event_Management_System
                 ConfirmPasswordTextBox.PasswordChar = '*';
                 ToggleShowPassword.ForeColor = Color.Red;
                 ToggleShowPassword.Text = "Show Password";
+            }
+        }
+
+        private void SignupButton_Click(object sender, EventArgs e)
+        {
+            if(UsernameTextBox.Text == "" || PasswordTextBox.Text == "" || ConfirmPasswordTextBox.Text == "" || SignupRole.Text == "" || EmailTextBox.Text == "")
+            {
+                MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int errorCount = 0;
+            string error = "";
+            if (UserExists(UsernameTextBox.Text))
+            {
+                error += "Username already exists\n";
+                errorCount++;
+            }
+
+            if (!IsValidEmail(EmailTextBox.Text))
+            {
+                error += "Invalid email format\n";
+                errorCount++;
+            }
+
+            if (EmailExists(EmailTextBox.Text))
+            {
+                error += "Email already exists\n";
+                errorCount++;
+            }
+
+            if (PasswordTextBox.Text != ConfirmPasswordTextBox.Text)
+            {
+                error += "Passwords do not match\n";
+                errorCount++;
+            }
+
+            if (errorCount > 0)
+            {
+                if(errorCount == 1)
+                {
+                    MessageBox.Show(error + "\nPlease Correct and try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please fix following fields: \n\n" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                return;
+            }
+
+
+            string query = "";
+
+            query = $"INSERT INTO Users (username, email, password_hash, role_id) VALUES ('{UsernameTextBox.Text.ToLower()}', '{EmailTextBox.Text.ToLower()}', '{PasswordTextBox.Text}', {SignupRole.SelectedIndex} + 3 )";
+            int result;
+
+            try
+            {
+                result = DatabaseHelper.Instance.ExecuteQuery(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Signup failed\n\nPlease Contact ITEC Management.\n\nErrorMessage:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (result == 1)
+            {
+                ErrorLabel.ForeColor = Color.Green;
+                ErrorLabel.Text = "User Added";
+                MessageBox.Show("Signup successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
+            else
+            {
+                MessageBox.Show("Could not add user in database\n\nUnknowen Error. Please Contact ITEC Management.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTextBox_Leave(object sender, EventArgs e)
+        {
+            if(ConfirmPasswordTextBox.Text != "" && PasswordTextBox.Text != ConfirmPasswordTextBox.Text)
+            {
+                PasswordErrorLabel.Show();
+            }
+
+            else if (PasswordTextBox.Text == ConfirmPasswordTextBox.Text)
+            {
+                PasswordErrorLabel.Hide();
             }
         }
     }

@@ -31,16 +31,17 @@
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.LeftPicture = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.ToggleShowPassword = new System.Windows.Forms.Label();
             this.SignupButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.SignUpLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.SignInLabel = new System.Windows.Forms.Label();
             this.ITECHeading = new System.Windows.Forms.Label();
-            this.ErrorLabel = new System.Windows.Forms.Label();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPicture)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -54,7 +55,7 @@
             this.LeftPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.LeftPanel.MinimumSize = new System.Drawing.Size(334, 599);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(334, 653);
+            this.LeftPanel.Size = new System.Drawing.Size(334, 654);
             this.LeftPanel.TabIndex = 0;
             // 
             // LeftPicture
@@ -65,7 +66,7 @@
             this.LeftPicture.Margin = new System.Windows.Forms.Padding(0);
             this.LeftPicture.MinimumSize = new System.Drawing.Size(334, 599);
             this.LeftPicture.Name = "LeftPicture";
-            this.LeftPicture.Size = new System.Drawing.Size(334, 653);
+            this.LeftPicture.Size = new System.Drawing.Size(334, 654);
             this.LeftPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LeftPicture.TabIndex = 0;
             this.LeftPicture.TabStop = false;
@@ -73,6 +74,7 @@
             // TopPanel
             // 
             this.TopPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TopPanel.Controls.Add(this.ToggleShowPassword);
             this.TopPanel.Controls.Add(this.SignupButton);
             this.TopPanel.Controls.Add(this.LoginButton);
             this.TopPanel.Controls.Add(this.PasswordTextBox);
@@ -82,19 +84,31 @@
             this.TopPanel.Controls.Add(this.UsernameTextBox);
             this.TopPanel.Controls.Add(this.UsernameLabel);
             this.TopPanel.Controls.Add(this.SignInLabel);
-            this.TopPanel.Location = new System.Drawing.Point(365, 138);
+            this.TopPanel.Location = new System.Drawing.Point(387, 138);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TopPanel.MinimumSize = new System.Drawing.Size(550, 599);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(706, 599);
             this.TopPanel.TabIndex = 1;
             // 
+            // ToggleShowPassword
+            // 
+            this.ToggleShowPassword.AutoSize = true;
+            this.ToggleShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToggleShowPassword.ForeColor = System.Drawing.Color.Red;
+            this.ToggleShowPassword.Location = new System.Drawing.Point(428, 261);
+            this.ToggleShowPassword.Name = "ToggleShowPassword";
+            this.ToggleShowPassword.Size = new System.Drawing.Size(129, 20);
+            this.ToggleShowPassword.TabIndex = 10;
+            this.ToggleShowPassword.Text = "Show Password";
+            this.ToggleShowPassword.Click += new System.EventHandler(this.ToggleShowPassword_Click);
+            // 
             // SignupButton
             // 
             this.SignupButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.SignupButton.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupButton.ForeColor = System.Drawing.Color.Transparent;
-            this.SignupButton.Location = new System.Drawing.Point(423, 416);
+            this.SignupButton.Location = new System.Drawing.Point(36, 434);
             this.SignupButton.Name = "SignupButton";
             this.SignupButton.Size = new System.Drawing.Size(214, 54);
             this.SignupButton.TabIndex = 4;
@@ -107,7 +121,7 @@
             this.LoginButton.BackColor = System.Drawing.Color.Chocolate;
             this.LoginButton.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.Transparent;
-            this.LoginButton.Location = new System.Drawing.Point(423, 287);
+            this.LoginButton.Location = new System.Drawing.Point(343, 304);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(214, 54);
             this.LoginButton.TabIndex = 3;
@@ -127,18 +141,32 @@
             this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             this.PasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTextBox_KeyDown);
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Black;
+            this.ErrorLabel.Location = new System.Drawing.Point(183, 274);
+            this.ErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 24);
+            this.ErrorLabel.TabIndex = 0;
+            // 
             // SignUpLabel
             // 
             this.SignUpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SignUpLabel.AutoSize = true;
-            this.SignUpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpLabel.ForeColor = System.Drawing.Color.Black;
-            this.SignUpLabel.Location = new System.Drawing.Point(182, 433);
+            this.SignUpLabel.Location = new System.Drawing.Point(46, 410);
             this.SignUpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SignUpLabel.Name = "SignUpLabel";
-            this.SignUpLabel.Size = new System.Drawing.Size(217, 25);
+            this.SignUpLabel.Size = new System.Drawing.Size(185, 20);
             this.SignUpLabel.TabIndex = 0;
             this.SignUpLabel.Text = "Don\'t have an account?";
             // 
@@ -148,12 +176,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.Black;
-            this.PasswordLabel.Location = new System.Drawing.Point(30, 216);
+            this.PasswordLabel.Location = new System.Drawing.Point(65, 220);
             this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(134, 35);
+            this.PasswordLabel.Size = new System.Drawing.Size(118, 29);
             this.PasswordLabel.TabIndex = 0;
             this.PasswordLabel.Text = "Password:";
             // 
@@ -174,12 +202,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.Black;
-            this.UsernameLabel.Location = new System.Drawing.Point(26, 150);
+            this.UsernameLabel.Location = new System.Drawing.Point(59, 149);
             this.UsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(138, 33);
+            this.UsernameLabel.Size = new System.Drawing.Size(124, 29);
             this.UsernameLabel.TabIndex = 0;
             this.UsernameLabel.Text = "Username:";
             // 
@@ -204,32 +232,18 @@
             this.ITECHeading.AutoSize = true;
             this.ITECHeading.Font = new System.Drawing.Font("Arial Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ITECHeading.ForeColor = System.Drawing.Color.DarkOrange;
-            this.ITECHeading.Location = new System.Drawing.Point(463, 9);
+            this.ITECHeading.Location = new System.Drawing.Point(436, 9);
             this.ITECHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ITECHeading.Name = "ITECHeading";
             this.ITECHeading.Size = new System.Drawing.Size(488, 83);
             this.ITECHeading.TabIndex = 0;
             this.ITECHeading.Text = "ITEC Manager";
             // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorLabel.ForeColor = System.Drawing.Color.Black;
-            this.ErrorLabel.Location = new System.Drawing.Point(182, 304);
-            this.ErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(0, 24);
-            this.ErrorLabel.TabIndex = 0;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 653);
+            this.ClientSize = new System.Drawing.Size(1029, 654);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.ITECHeading);
             this.Controls.Add(this.LeftPanel);
@@ -262,6 +276,7 @@
         private System.Windows.Forms.Label SignUpLabel;
         private System.Windows.Forms.Button SignupButton;
         private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Label ToggleShowPassword;
     }
 }
 

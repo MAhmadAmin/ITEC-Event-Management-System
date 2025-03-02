@@ -34,7 +34,7 @@ namespace ITEC_Event_Management_System
                 return;
             }
 
-            string query = $"SELECT * FROM Users U INNER JOIN Roles R ON U.role_id = R.role_id WHERE username = '{UsernameTextBox.Text}'";
+            string query = $"SELECT * FROM Users U INNER JOIN Roles R ON U.role_id = R.role_id WHERE username = '{UsernameTextBox.Text.ToLower()}'";
 
             var reader = DatabaseHelper.Instance.getData(query);
 
@@ -117,6 +117,22 @@ namespace ITEC_Event_Management_System
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
             ErrorLabel.Text = "";
+        }
+
+        private void ToggleShowPassword_Click(object sender, EventArgs e)
+        {
+            if (PasswordTextBox.PasswordChar == '*')
+            {
+                PasswordTextBox.PasswordChar = '\0';
+                ToggleShowPassword.ForeColor = Color.Green;
+                ToggleShowPassword.Text = "Hide Password";
+            }
+            else
+            {
+                PasswordTextBox.PasswordChar = '*';
+                ToggleShowPassword.ForeColor = Color.Red;
+                ToggleShowPassword.Text = "Show Password";
+            }
         }
     }
 }
