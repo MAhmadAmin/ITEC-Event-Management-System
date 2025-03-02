@@ -53,7 +53,7 @@
             this.LeftPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.LeftPanel.MinimumSize = new System.Drawing.Size(334, 599);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(334, 680);
+            this.LeftPanel.Size = new System.Drawing.Size(334, 691);
             this.LeftPanel.TabIndex = 0;
             // 
             // LeftPicture
@@ -64,7 +64,7 @@
             this.LeftPicture.Margin = new System.Windows.Forms.Padding(0);
             this.LeftPicture.MinimumSize = new System.Drawing.Size(334, 599);
             this.LeftPicture.Name = "LeftPicture";
-            this.LeftPicture.Size = new System.Drawing.Size(334, 680);
+            this.LeftPicture.Size = new System.Drawing.Size(334, 691);
             this.LeftPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LeftPicture.TabIndex = 0;
             this.LeftPicture.TabStop = false;
@@ -80,7 +80,7 @@
             this.TopPanel.Controls.Add(this.UsernameTextBox);
             this.TopPanel.Controls.Add(this.UsernameLabel);
             this.TopPanel.Controls.Add(this.SignInLabel);
-            this.TopPanel.Location = new System.Drawing.Point(387, 165);
+            this.TopPanel.Location = new System.Drawing.Point(402, 138);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TopPanel.MinimumSize = new System.Drawing.Size(550, 599);
             this.TopPanel.Name = "TopPanel";
@@ -110,6 +110,7 @@
             this.LoginButton.TabIndex = 3;
             this.LoginButton.Text = "Log In";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // PasswordTextBox
             // 
@@ -195,7 +196,7 @@
             this.ITECHeading.AutoSize = true;
             this.ITECHeading.Font = new System.Drawing.Font("Arial Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ITECHeading.ForeColor = System.Drawing.Color.DarkOrange;
-            this.ITECHeading.Location = new System.Drawing.Point(497, 9);
+            this.ITECHeading.Location = new System.Drawing.Point(498, 9);
             this.ITECHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ITECHeading.Name = "ITECHeading";
             this.ITECHeading.Size = new System.Drawing.Size(488, 83);
@@ -206,12 +207,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 680);
+            this.ClientSize = new System.Drawing.Size(1153, 691);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.ITECHeading);
             this.Controls.Add(this.LeftPanel);
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.MinimumSize = new System.Drawing.Size(596, 401);
+            this.MinimumSize = new System.Drawing.Size(589, 381);
             this.Name = "Login";
             this.Text = "ITEC Event Manager";
             this.Load += new System.EventHandler(this.Login_Load);
