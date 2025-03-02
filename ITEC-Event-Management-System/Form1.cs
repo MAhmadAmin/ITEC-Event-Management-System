@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ITEC_Event_Management_System
 {
@@ -24,9 +25,12 @@ namespace ITEC_Event_Management_System
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            ErrorLabel.Text = "";
+            ErrorLabel.ForeColor = Color.Red;
+
             if (UsernameTextBox.Text == "" || PasswordTextBox.Text == "")
             {
-                MessageBox.Show("Please enter a username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -42,6 +46,9 @@ namespace ITEC_Event_Management_System
 
                 if (password == PasswordTextBox.Text)
                 {
+                    ErrorLabel.ForeColor = Color.Green;
+                    ErrorLabel.Text = "Login successful";
+
                     //if (role == "admin")
                     //{
                     //    Admin admin = new Admin();
@@ -57,14 +64,59 @@ namespace ITEC_Event_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    PasswordTextBox.Focus();
+                    PasswordTextBox.SelectAll();
+
+                    ErrorLabel.Text = "Incorrect password";
+
+                    ErrorLabel.ForeColor = Color.Red;
+                    //MessageBox.Show("Incorrect password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("User not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                PasswordTextBox.Text = "";
+                UsernameTextBox.Focus();
+                UsernameTextBox.SelectAll();
 
+                ErrorLabel.ForeColor = Color.Red;
+                ErrorLabel.Text = "User not found";
+
+                //MessageBox.Show("User not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SignupButton_Click(object sender, EventArgs e)
+        {
+            Signup signupFrom = new Signup();
+            this.Hide();
+            signupFrom.Show();
+        }
+
+        private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                PasswordTextBox.Focus();
+            }
+        }
+
+        private void UsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ErrorLabel.Text = "";
+        }
+
+        private void PasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                LoginButton.PerformClick();
+            }
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ErrorLabel.Text = "";
         }
     }
 }

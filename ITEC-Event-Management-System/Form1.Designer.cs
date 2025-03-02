@@ -40,6 +40,7 @@
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.SignInLabel = new System.Windows.Forms.Label();
             this.ITECHeading = new System.Windows.Forms.Label();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPicture)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -53,7 +54,7 @@
             this.LeftPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.LeftPanel.MinimumSize = new System.Drawing.Size(334, 599);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(334, 691);
+            this.LeftPanel.Size = new System.Drawing.Size(334, 653);
             this.LeftPanel.TabIndex = 0;
             // 
             // LeftPicture
@@ -64,7 +65,7 @@
             this.LeftPicture.Margin = new System.Windows.Forms.Padding(0);
             this.LeftPicture.MinimumSize = new System.Drawing.Size(334, 599);
             this.LeftPicture.Name = "LeftPicture";
-            this.LeftPicture.Size = new System.Drawing.Size(334, 691);
+            this.LeftPicture.Size = new System.Drawing.Size(334, 653);
             this.LeftPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LeftPicture.TabIndex = 0;
             this.LeftPicture.TabStop = false;
@@ -75,12 +76,13 @@
             this.TopPanel.Controls.Add(this.SignupButton);
             this.TopPanel.Controls.Add(this.LoginButton);
             this.TopPanel.Controls.Add(this.PasswordTextBox);
+            this.TopPanel.Controls.Add(this.ErrorLabel);
             this.TopPanel.Controls.Add(this.SignUpLabel);
             this.TopPanel.Controls.Add(this.PasswordLabel);
             this.TopPanel.Controls.Add(this.UsernameTextBox);
             this.TopPanel.Controls.Add(this.UsernameLabel);
             this.TopPanel.Controls.Add(this.SignInLabel);
-            this.TopPanel.Location = new System.Drawing.Point(402, 138);
+            this.TopPanel.Location = new System.Drawing.Point(365, 138);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TopPanel.MinimumSize = new System.Drawing.Size(550, 599);
             this.TopPanel.Name = "TopPanel";
@@ -98,6 +100,7 @@
             this.SignupButton.TabIndex = 4;
             this.SignupButton.Text = "Sign up";
             this.SignupButton.UseVisualStyleBackColor = false;
+            this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click);
             // 
             // LoginButton
             // 
@@ -118,8 +121,11 @@
             this.PasswordTextBox.Location = new System.Drawing.Point(187, 221);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(370, 28);
             this.PasswordTextBox.TabIndex = 2;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
+            this.PasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTextBox_KeyDown);
             // 
             // SignUpLabel
             // 
@@ -132,9 +138,9 @@
             this.SignUpLabel.Location = new System.Drawing.Point(182, 433);
             this.SignUpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SignUpLabel.Name = "SignUpLabel";
-            this.SignUpLabel.Size = new System.Drawing.Size(220, 25);
+            this.SignUpLabel.Size = new System.Drawing.Size(217, 25);
             this.SignUpLabel.TabIndex = 0;
-            this.SignUpLabel.Text = "Don\'t Have an account?";
+            this.SignUpLabel.Text = "Don\'t have an account?";
             // 
             // PasswordLabel
             // 
@@ -159,6 +165,8 @@
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(370, 28);
             this.UsernameTextBox.TabIndex = 1;
+            this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
+            this.UsernameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameTextBox_KeyDown);
             // 
             // UsernameLabel
             // 
@@ -196,18 +204,32 @@
             this.ITECHeading.AutoSize = true;
             this.ITECHeading.Font = new System.Drawing.Font("Arial Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ITECHeading.ForeColor = System.Drawing.Color.DarkOrange;
-            this.ITECHeading.Location = new System.Drawing.Point(498, 9);
+            this.ITECHeading.Location = new System.Drawing.Point(463, 9);
             this.ITECHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ITECHeading.Name = "ITECHeading";
             this.ITECHeading.Size = new System.Drawing.Size(488, 83);
             this.ITECHeading.TabIndex = 0;
             this.ITECHeading.Text = "ITEC Manager";
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Black;
+            this.ErrorLabel.Location = new System.Drawing.Point(182, 304);
+            this.ErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 24);
+            this.ErrorLabel.TabIndex = 0;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 691);
+            this.ClientSize = new System.Drawing.Size(1082, 653);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.ITECHeading);
             this.Controls.Add(this.LeftPanel);
@@ -239,6 +261,7 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label SignUpLabel;
         private System.Windows.Forms.Button SignupButton;
+        private System.Windows.Forms.Label ErrorLabel;
     }
 }
 
