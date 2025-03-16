@@ -39,16 +39,16 @@ namespace ITEC_Event_Management_System
             LoadForm(new ITECEditions());
         }
 
-        private void SIgnup_Click(object sender, EventArgs e)
-        {
-            LoadForm(new Signup());
-        }
-
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login login = new Login();
             login.Show();
+        }
+
+        private void EventsButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

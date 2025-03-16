@@ -73,6 +73,16 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Events {
+            get {
+                object obj = ResourceManager.GetObject("Events", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FrontPageImage {
             get {
                 object obj = ResourceManager.GetObject("FrontPageImage", resourceCulture);
