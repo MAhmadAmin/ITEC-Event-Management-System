@@ -221,5 +221,11 @@
   <ItemGroup>
     <None Include="Resources\VenueIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParticipantIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favpng_earth-globe-world-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

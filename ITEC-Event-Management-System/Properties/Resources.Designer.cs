@@ -83,6 +83,16 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap favpng_earth_globe_world_icon {
+            get {
+                object obj = ResourceManager.GetObject("favpng_earth-globe-world-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FrontPageImage {
             get {
                 object obj = ResourceManager.GetObject("FrontPageImage", resourceCulture);
@@ -146,6 +156,16 @@ namespace ITEC_Event_Management_System.Properties {
         internal static System.Drawing.Bitmap LogoutIcon {
             get {
                 object obj = ResourceManager.GetObject("LogoutIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ParticipantIcon {
+            get {
+                object obj = ResourceManager.GetObject("ParticipantIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

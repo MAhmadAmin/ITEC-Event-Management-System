@@ -28,25 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.SidePanelButtonsPanel = new System.Windows.Forms.Panel();
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.AdminPanelHeadning = new System.Windows.Forms.Label();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.SidePanelButtonsPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.VenuesButton = new System.Windows.Forms.Button();
             this.EventsButton = new System.Windows.Forms.Button();
             this.ITECEditionsButton = new System.Windows.Forms.Button();
             this.AdminPictureBox = new System.Windows.Forms.PictureBox();
+            this.TopPanel = new System.Windows.Forms.Panel();
+            this.AdminPanelHeadning = new System.Windows.Forms.Label();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel.SuspendLayout();
             this.SidePanelButtonsPanel.SuspendLayout();
-            this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).BeginInit();
+            this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.SidePanel.Controls.Add(this.pictureBox1);
             this.SidePanel.Controls.Add(this.LogoutButton);
             this.SidePanel.Controls.Add(this.SidePanelButtonsPanel);
             this.SidePanel.Controls.Add(this.AdminPictureBox);
@@ -55,47 +60,6 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(182, 729);
             this.SidePanel.TabIndex = 0;
-            // 
-            // SidePanelButtonsPanel
-            // 
-            this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SidePanelButtonsPanel.Controls.Add(this.VenuesButton);
-            this.SidePanelButtonsPanel.Controls.Add(this.EventsButton);
-            this.SidePanelButtonsPanel.Controls.Add(this.ITECEditionsButton);
-            this.SidePanelButtonsPanel.Location = new System.Drawing.Point(3, 154);
-            this.SidePanelButtonsPanel.Name = "SidePanelButtonsPanel";
-            this.SidePanelButtonsPanel.Size = new System.Drawing.Size(173, 197);
-            this.SidePanelButtonsPanel.TabIndex = 0;
-            // 
-            // TopPanel
-            // 
-            this.TopPanel.Controls.Add(this.AdminPanelHeadning);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(182, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(802, 59);
-            this.TopPanel.TabIndex = 1;
-            // 
-            // AdminPanelHeadning
-            // 
-            this.AdminPanelHeadning.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AdminPanelHeadning.AutoSize = true;
-            this.AdminPanelHeadning.Font = new System.Drawing.Font("Arial Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminPanelHeadning.ForeColor = System.Drawing.Color.DarkOrange;
-            this.AdminPanelHeadning.Location = new System.Drawing.Point(253, 0);
-            this.AdminPanelHeadning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AdminPanelHeadning.Name = "AdminPanelHeadning";
-            this.AdminPanelHeadning.Size = new System.Drawing.Size(281, 54);
-            this.AdminPanelHeadning.TabIndex = 1;
-            this.AdminPanelHeadning.Text = "Admin Panel";
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(182, 59);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(802, 670);
-            this.MainPanel.TabIndex = 2;
             // 
             // LogoutButton
             // 
@@ -107,13 +71,44 @@
             this.LogoutButton.ForeColor = System.Drawing.Color.White;
             this.LogoutButton.Image = global::ITEC_Event_Management_System.Properties.Resources.LogoutIcon;
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(22, 597);
+            this.LogoutButton.Location = new System.Drawing.Point(22, 645);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(129, 32);
             this.LogoutButton.TabIndex = 3;
             this.LogoutButton.Text = "Log out";
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            // 
+            // SidePanelButtonsPanel
+            // 
+            this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SidePanelButtonsPanel.Controls.Add(this.button1);
+            this.SidePanelButtonsPanel.Controls.Add(this.VenuesButton);
+            this.SidePanelButtonsPanel.Controls.Add(this.EventsButton);
+            this.SidePanelButtonsPanel.Controls.Add(this.ITECEditionsButton);
+            this.SidePanelButtonsPanel.Location = new System.Drawing.Point(3, 154);
+            this.SidePanelButtonsPanel.Name = "SidePanelButtonsPanel";
+            this.SidePanelButtonsPanel.Size = new System.Drawing.Size(173, 197);
+            this.SidePanelButtonsPanel.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::ITEC_Event_Management_System.Properties.Resources.ParticipantIcon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 32);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "          Participants";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // VenuesButton
             // 
@@ -184,6 +179,47 @@
             this.AdminPictureBox.TabIndex = 1;
             this.AdminPictureBox.TabStop = false;
             // 
+            // TopPanel
+            // 
+            this.TopPanel.Controls.Add(this.AdminPanelHeadning);
+            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPanel.Location = new System.Drawing.Point(182, 0);
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.Size = new System.Drawing.Size(802, 59);
+            this.TopPanel.TabIndex = 1;
+            // 
+            // AdminPanelHeadning
+            // 
+            this.AdminPanelHeadning.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AdminPanelHeadning.AutoSize = true;
+            this.AdminPanelHeadning.Font = new System.Drawing.Font("Arial Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminPanelHeadning.ForeColor = System.Drawing.Color.DarkOrange;
+            this.AdminPanelHeadning.Location = new System.Drawing.Point(253, 0);
+            this.AdminPanelHeadning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AdminPanelHeadning.Name = "AdminPanelHeadning";
+            this.AdminPanelHeadning.Size = new System.Drawing.Size(281, 54);
+            this.AdminPanelHeadning.TabIndex = 1;
+            this.AdminPanelHeadning.Text = "Admin Panel";
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(182, 59);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(802, 670);
+            this.MainPanel.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::ITEC_Event_Management_System.Properties.Resources.favpng_earth_globe_world_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 556);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +228,7 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.SidePanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -200,9 +237,10 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.SidePanel.ResumeLayout(false);
             this.SidePanelButtonsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).EndInit();
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,5 +257,7 @@
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Button EventsButton;
         private System.Windows.Forms.Button VenuesButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

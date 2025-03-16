@@ -55,5 +55,10 @@ namespace ITEC_Event_Management_System
         {
             LoadForm(new Venues());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Participants());
+        }
     }
 }
