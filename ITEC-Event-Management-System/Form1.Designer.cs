@@ -73,7 +73,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TopPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TopPanel.Controls.Add(this.ToggleShowPassword);
             this.TopPanel.Controls.Add(this.SignupButton);
             this.TopPanel.Controls.Add(this.LoginButton);

@@ -16,11 +16,14 @@ namespace ITEC_Event_Management_System
 		public Login()
 		{
 			InitializeComponent();
-		}
+        }
 
 		private void Login_Load(object sender, EventArgs e)
 		{
-
+            AdminDashboard admin = new AdminDashboard();
+			this.Hide();
+			admin.Show();
+			this.Hide();
 		}
 
 		private void LoginButton_Click(object sender, EventArgs e)

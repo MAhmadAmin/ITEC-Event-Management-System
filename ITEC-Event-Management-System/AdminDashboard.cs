@@ -19,7 +19,36 @@ namespace ITEC_Event_Management_System
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+            LoadForm(new ITECEditions());
+        }
 
+        private void LoadForm(object Form)
+        {
+            if (this.MainPanel.Controls.Count > 0)
+                this.MainPanel.Controls.RemoveAt(0);
+            Form fh = Form as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.MainPanel.Controls.Add(fh);
+            this.MainPanel.Tag = fh;
+            fh.Show();
+        }
+
+        private void ITECEditionsButton_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ITECEditions());
+        }
+
+        private void SIgnup_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Signup());
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
