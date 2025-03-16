@@ -119,6 +119,9 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +160,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\InfoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GentleManAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdminTeamWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITECEdition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITECEdition30x30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITECEdition24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

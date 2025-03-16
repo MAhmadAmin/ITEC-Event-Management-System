@@ -63,6 +63,16 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AdminTeamWhite {
+            get {
+                object obj = ResourceManager.GetObject("AdminTeamWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FrontPageImage {
             get {
                 object obj = ResourceManager.GetObject("FrontPageImage", resourceCulture);
@@ -73,9 +83,49 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GentleManAdmin {
+            get {
+                object obj = ResourceManager.GetObject("GentleManAdmin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap InfoIcon {
             get {
                 object obj = ResourceManager.GetObject("InfoIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ITECEdition {
+            get {
+                object obj = ResourceManager.GetObject("ITECEdition", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ITECEdition24x24 {
+            get {
+                object obj = ResourceManager.GetObject("ITECEdition24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ITECEdition30x30 {
+            get {
+                object obj = ResourceManager.GetObject("ITECEdition30x30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

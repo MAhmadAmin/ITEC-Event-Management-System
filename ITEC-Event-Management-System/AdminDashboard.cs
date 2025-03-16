@@ -16,5 +16,10 @@ namespace ITEC_Event_Management_System
         {
             InitializeComponent();
         }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
