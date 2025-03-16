@@ -19,7 +19,7 @@ namespace ITEC_Event_Management_System
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            LoadForm(new ITECEditions());
+            LoadForm(new Venues());
         }
 
         private void LoadForm(object Form)
@@ -48,7 +48,12 @@ namespace ITEC_Event_Management_System
 
         private void EventsButton_Click(object sender, EventArgs e)
         {
+            LoadForm(new Events());
+        }
 
+        private void VenuesButton_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Venues());
         }
     }
 }

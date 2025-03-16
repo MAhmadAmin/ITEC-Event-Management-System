@@ -46,10 +46,10 @@
             this.ButtonsPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.SuccessLabel = new System.Windows.Forms.Label();
+            this.ShowAllButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.RetrieveButton = new System.Windows.Forms.Button();
-            this.ShowAllButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -71,7 +71,7 @@
             this.DataPanel.Controls.Add(this.IDTextBox);
             this.DataPanel.Controls.Add(this.DescriptionLabel);
             this.DataPanel.Controls.Add(this.ThemeLabel);
-            this.DataPanel.Location = new System.Drawing.Point(108, 149);
+            this.DataPanel.Location = new System.Drawing.Point(102, 145);
             this.DataPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DataPanel.Name = "DataPanel";
             this.DataPanel.Size = new System.Drawing.Size(463, 310);
@@ -250,12 +250,12 @@
             // 
             this.ITECEditionsHeading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ITECEditionsHeading.AutoSize = true;
-            this.ITECEditionsHeading.Font = new System.Drawing.Font("Impact", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ITECEditionsHeading.ForeColor = System.Drawing.Color.Chocolate;
-            this.ITECEditionsHeading.Location = new System.Drawing.Point(513, 22);
+            this.ITECEditionsHeading.Font = new System.Drawing.Font("Product Sans Black", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ITECEditionsHeading.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.ITECEditionsHeading.Location = new System.Drawing.Point(456, 37);
             this.ITECEditionsHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ITECEditionsHeading.Name = "ITECEditionsHeading";
-            this.ITECEditionsHeading.Size = new System.Drawing.Size(241, 48);
+            this.ITECEditionsHeading.Size = new System.Drawing.Size(272, 51);
             this.ITECEditionsHeading.TabIndex = 0;
             this.ITECEditionsHeading.Text = "ITEC Editions";
             this.ITECEditionsHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,10 +263,12 @@
             // DataGrid
             // 
             this.DataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid.Location = new System.Drawing.Point(675, 101);
+            this.DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DataGrid.Location = new System.Drawing.Point(669, 97);
             this.DataGrid.Name = "DataGrid";
-            this.DataGrid.Size = new System.Drawing.Size(475, 638);
+            this.DataGrid.Size = new System.Drawing.Size(519, 638);
             this.DataGrid.TabIndex = 9;
             this.DataGrid.DoubleClick += new System.EventHandler(this.DataGrid_DoubleClick);
             // 
@@ -280,7 +282,7 @@
             this.ButtonsPanel.Controls.Add(this.UpdateButton);
             this.ButtonsPanel.Controls.Add(this.RetrieveButton);
             this.ButtonsPanel.Controls.Add(this.AddButton);
-            this.ButtonsPanel.Location = new System.Drawing.Point(108, 500);
+            this.ButtonsPanel.Location = new System.Drawing.Point(102, 496);
             this.ButtonsPanel.Name = "ButtonsPanel";
             this.ButtonsPanel.Size = new System.Drawing.Size(496, 210);
             this.ButtonsPanel.TabIndex = 8;
@@ -316,6 +318,22 @@
             this.SuccessLabel.Text = "None";
             this.SuccessLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.SuccessLabel.Visible = false;
+            // 
+            // ShowAllButton
+            // 
+            this.ShowAllButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ShowAllButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.ShowAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowAllButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowAllButton.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowAllButton.Location = new System.Drawing.Point(176, 118);
+            this.ShowAllButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ShowAllButton.Name = "ShowAllButton";
+            this.ShowAllButton.Size = new System.Drawing.Size(121, 33);
+            this.ShowAllButton.TabIndex = 8;
+            this.ShowAllButton.Text = "Show All";
+            this.ShowAllButton.UseVisualStyleBackColor = false;
+            this.ShowAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
             // 
             // DeleteButton
             // 
@@ -362,29 +380,13 @@
             this.RetrieveButton.UseVisualStyleBackColor = false;
             this.RetrieveButton.Click += new System.EventHandler(this.RetrieveButton_Click);
             // 
-            // ShowAllButton
-            // 
-            this.ShowAllButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ShowAllButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.ShowAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShowAllButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowAllButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowAllButton.Location = new System.Drawing.Point(176, 118);
-            this.ShowAllButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ShowAllButton.Name = "ShowAllButton";
-            this.ShowAllButton.Size = new System.Drawing.Size(121, 33);
-            this.ShowAllButton.TabIndex = 8;
-            this.ShowAllButton.Text = "Show All";
-            this.ShowAllButton.UseVisualStyleBackColor = false;
-            this.ShowAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ITECEditionsHeading);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1213, 95);
+            this.panel1.Size = new System.Drawing.Size(1200, 95);
             this.panel1.TabIndex = 10;
             // 
             // ITECEditions
@@ -392,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1213, 858);
+            this.ClientSize = new System.Drawing.Size(1200, 850);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.DataGrid);

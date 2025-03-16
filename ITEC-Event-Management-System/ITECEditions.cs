@@ -53,6 +53,7 @@ namespace ITEC_Event_Management_System
 
 		private void IDTextBox_Leave(object sender, EventArgs e)
 		{
+			UpdateButtons();
 			if (IDTextBox.Text == "")
 			{
 				IDTextBox.Text = "auto increment";
@@ -89,20 +90,14 @@ namespace ITEC_Event_Management_System
 
 		private void AddButton_Click(object sender, EventArgs e)
 		{
-			if (YearTextBox.Text == "" || ThemeTextBox.Text == "" || DescriptionTextBox.Text == "")
-			{
-				MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return;
-			}
-
-			if (!IsNumeric(YearTextBox.Text))
-			{
-				MessageBox.Show("ID and Year must be numeric", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return;
-			}
-
 			int year = int.Parse(YearTextBox.Text);
-			string query = $"INSERT INTO Itec_editions (year, theme, description) VALUES ({year}, '{ThemeTextBox.Text}', '{DescriptionTextBox.Text}')";
+
+            string yearValue = int.Parse(YearTextBox.Text).ToString();
+            string themeValue = string.IsNullOrWhiteSpace(ThemeTextBox.Text) ? "NULL" : $"'{ThemeTextBox.Text}'";
+            string descriptionValue = string.IsNullOrWhiteSpace(DescriptionTextBox.Text) ? "NULL" : $"'{DescriptionTextBox.Text}'";
+
+            string query = $"INSERT INTO Itec_editions (year, theme, description) VALUES ({yearValue}, {themeValue}, {descriptionValue})";
+
 			int result;
 
 			try
@@ -144,7 +139,7 @@ namespace ITEC_Event_Management_System
 		private void UpdateButtons()
 		{
 			SuccessLabel.Text = "None";
-			if ((IDTextBox.Text == "auto increment" || IDTextBox.Text == "") && YearTextBox.Text != "")
+			if ((IDTextBox.Text == "auto increment" || IDTextBox.Text == "") && YearTextBox.Text != "" && IsNumeric(YearTextBox.Text))
 			{
 				AddButton.Enabled = true;
 				AddButton.ForeColor = Color.White;
@@ -175,7 +170,7 @@ namespace ITEC_Event_Management_System
 				RetrieveButton.BackColor = Color.Gray;
 			}
 
-			if(IDTextBox.Text != "" && IDTextBox.Text != "auto increment" && YearTextBox.Text !="" && IsNumeric(IDTextBox.Text) && IsNumeric(YearTextBox.Text))
+			if(IDTextBox.Text != "" && IDTextBox.Text != "auto increment" && (YearTextBox.Text =="" ||  IsNumeric(YearTextBox.Text)) && IsNumeric(IDTextBox.Text) )
 			{
 				UpdateButton.Enabled = true;
 				UpdateButton.BackColor = Color.RoyalBlue;
@@ -250,12 +245,17 @@ namespace ITEC_Event_Management_System
 				return;
             }
 
-			if(ThemeTextBox.Text == "")
-				ThemeTextBox.Text = reader["theme"].ToString();
-			if (DescriptionTextBox.Text == "")
-				DescriptionTextBox.Text = reader["description"].ToString();
 
-			string query1 = $"UPDATE Itec_editions SET year = {int.Parse(YearTextBox.Text)}, theme = '{ThemeTextBox.Text}', description = '{DescriptionTextBox.Text}' WHERE itec_ID = {int.Parse(IDTextBox.Text)}";
+			if(string.IsNullOrEmpty(YearTextBox.Text))
+                YearTextBox.Text = reader["year"].ToString();
+            if (string.IsNullOrEmpty(ThemeTextBox.Text))
+				ThemeTextBox.Text = reader["theme"].ToString();
+			//if (string.IsNullOrEmpty(DescriptionTextBox.Text))
+			//	DescriptionTextBox.Text = reader["description"].ToString();
+
+			string descriptionValue = string.IsNullOrWhiteSpace(DescriptionTextBox.Text) ? "NULL" : $"'{DescriptionTextBox.Text}'";
+
+            string query1 = $"UPDATE Itec_editions SET year = {int.Parse(YearTextBox.Text)}, theme = '{ThemeTextBox.Text}', description = {descriptionValue} WHERE itec_ID = {int.Parse(IDTextBox.Text)}";
 
 			int result = DatabaseHelper.Instance.ExecuteQuery(query1);
 			if (result == 0)

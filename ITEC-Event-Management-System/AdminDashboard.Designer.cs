@@ -34,9 +34,10 @@
             this.AdminPanelHeadning = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.VenuesButton = new System.Windows.Forms.Button();
+            this.EventsButton = new System.Windows.Forms.Button();
             this.ITECEditionsButton = new System.Windows.Forms.Button();
             this.AdminPictureBox = new System.Windows.Forms.PictureBox();
-            this.EventsButton = new System.Windows.Forms.Button();
             this.SidePanel.SuspendLayout();
             this.SidePanelButtonsPanel.SuspendLayout();
             this.TopPanel.SuspendLayout();
@@ -58,6 +59,7 @@
             // SidePanelButtonsPanel
             // 
             this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SidePanelButtonsPanel.Controls.Add(this.VenuesButton);
             this.SidePanelButtonsPanel.Controls.Add(this.EventsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.ITECEditionsButton);
             this.SidePanelButtonsPanel.Location = new System.Drawing.Point(3, 154);
@@ -113,6 +115,44 @@
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
+            // VenuesButton
+            // 
+            this.VenuesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.VenuesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.VenuesButton.FlatAppearance.BorderSize = 0;
+            this.VenuesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VenuesButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VenuesButton.ForeColor = System.Drawing.Color.White;
+            this.VenuesButton.Image = global::ITEC_Event_Management_System.Properties.Resources.VenueIcon;
+            this.VenuesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.VenuesButton.Location = new System.Drawing.Point(3, 79);
+            this.VenuesButton.Name = "VenuesButton";
+            this.VenuesButton.Size = new System.Drawing.Size(167, 32);
+            this.VenuesButton.TabIndex = 4;
+            this.VenuesButton.Text = "          Venues";
+            this.VenuesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.VenuesButton.UseVisualStyleBackColor = true;
+            this.VenuesButton.Click += new System.EventHandler(this.VenuesButton_Click);
+            // 
+            // EventsButton
+            // 
+            this.EventsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EventsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EventsButton.FlatAppearance.BorderSize = 0;
+            this.EventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EventsButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventsButton.ForeColor = System.Drawing.Color.White;
+            this.EventsButton.Image = global::ITEC_Event_Management_System.Properties.Resources.Events;
+            this.EventsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EventsButton.Location = new System.Drawing.Point(3, 41);
+            this.EventsButton.Name = "EventsButton";
+            this.EventsButton.Size = new System.Drawing.Size(167, 32);
+            this.EventsButton.TabIndex = 3;
+            this.EventsButton.Text = "          Events";
+            this.EventsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EventsButton.UseVisualStyleBackColor = true;
+            this.EventsButton.Click += new System.EventHandler(this.EventsButton_Click);
+            // 
             // ITECEditionsButton
             // 
             this.ITECEditionsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -143,25 +183,6 @@
             this.AdminPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AdminPictureBox.TabIndex = 1;
             this.AdminPictureBox.TabStop = false;
-            // 
-            // EventsButton
-            // 
-            this.EventsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EventsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EventsButton.FlatAppearance.BorderSize = 0;
-            this.EventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EventsButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventsButton.ForeColor = System.Drawing.Color.White;
-            this.EventsButton.Image = global::ITEC_Event_Management_System.Properties.Resources.Events;
-            this.EventsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EventsButton.Location = new System.Drawing.Point(3, 41);
-            this.EventsButton.Name = "EventsButton";
-            this.EventsButton.Size = new System.Drawing.Size(167, 32);
-            this.EventsButton.TabIndex = 3;
-            this.EventsButton.Text = "          Events";
-            this.EventsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EventsButton.UseVisualStyleBackColor = true;
-            this.EventsButton.Click += new System.EventHandler(this.EventsButton_Click);
             // 
             // AdminDashboard
             // 
@@ -197,5 +218,6 @@
         private System.Windows.Forms.Panel SidePanelButtonsPanel;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Button EventsButton;
+        private System.Windows.Forms.Button VenuesButton;
     }
 }
