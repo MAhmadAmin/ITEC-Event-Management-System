@@ -34,8 +34,6 @@ namespace ITEC_Event_Management_System
             var connection = new MySqlConnection(connectionString);
             connection.Open();
 
-
-
             return connection;
         }
 

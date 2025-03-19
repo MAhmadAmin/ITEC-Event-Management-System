@@ -40,6 +40,12 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DataGrid = new System.Windows.Forms.DataGridView();
             this.DataPanel = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.ShowRolesButton = new System.Windows.Forms.Button();
             this.ShowEditionsButton = new System.Windows.Forms.Button();
             this.RoleIDComboBox = new System.Windows.Forms.ComboBox();
@@ -60,12 +66,6 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.ParticipantIDTextBox = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -264,6 +264,78 @@
             this.DataPanel.Name = "DataPanel";
             this.DataPanel.Size = new System.Drawing.Size(499, 421);
             this.DataPanel.TabIndex = 15;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.Location = new System.Drawing.Point(447, 349);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(24, 25);
+            this.button6.TabIndex = 24;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Location = new System.Drawing.Point(447, 296);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(24, 25);
+            this.button5.TabIndex = 23;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Location = new System.Drawing.Point(447, 243);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(24, 25);
+            this.button4.TabIndex = 22;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(447, 187);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 25);
+            this.button3.TabIndex = 21;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Location = new System.Drawing.Point(447, 131);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 25);
+            this.button2.TabIndex = 20;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(447, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 25);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ShowRolesButton
             // 
@@ -542,78 +614,6 @@
             this.EmailLabel.Size = new System.Drawing.Size(62, 23);
             this.EmailLabel.TabIndex = 0;
             this.EmailLabel.Text = "Email*";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(447, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 25);
-            this.button1.TabIndex = 19;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(447, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 25);
-            this.button2.TabIndex = 20;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(447, 187);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 25);
-            this.button3.TabIndex = 21;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Location = new System.Drawing.Point(447, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(24, 25);
-            this.button4.TabIndex = 22;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(447, 296);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(24, 25);
-            this.button5.TabIndex = 23;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(447, 349);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(24, 25);
-            this.button6.TabIndex = 24;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Participants
             // 

@@ -30,17 +30,16 @@ namespace ITEC_Event_Management_System
 			itec_editions.Close();
 			ITECIDComboBox.SelectedIndex = 0;
 
-            var roles = DatabaseHelper.Instance.getData("SELECT role_id FROM roles");
 
+			List<Lookup> lookups = LookupDataLayer.GetIDsByCategory("ParticipantRoles");
             RoleIDComboBox.Items.Add("None");
-            while (roles.Read())
+			foreach (Lookup lookup in lookups)
 			{
-				RoleIDComboBox.Items.Add(int.Parse(roles["role_id"].ToString()));
-			}
-			roles.Close();
+				RoleIDComboBox.Items.Add(lookup.ID);
+            }
+			RoleIDComboBox.SelectedIndex = 0;
 
 			UpdateButtons();
-			RoleIDComboBox.SelectedIndex = 0;
         }
 
 		private void ShowEditionsButton_Click(object sender, EventArgs e)
@@ -60,18 +59,35 @@ namespace ITEC_Event_Management_System
 
 		private void ShowRolesButton_Click(object sender, EventArgs e)
 		{
-			string query = "SELECT * FROM roles";
-			var reader = DatabaseHelper.Instance.getData(query);
 
-			MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
-			DataTable dt = new DataTable();
-			DataAdapter.Fill(dt);
+            List<Lookup> lookups = LookupDataLayer.GetIDsByCategory("ParticipantRoles");
 
-			DataGrid.DataSource = dt;
-			DataGrid.Refresh();
-			reader.Close();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("Category", typeof(string));
+            dt.Columns.Add("Value", typeof(string));
 
-			isOtherDataTable = true;
+            foreach (var lookup in lookups)
+            {
+                dt.Rows.Add(lookup.ID, lookup.category, lookup.value);
+            }
+
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
+            isOtherDataTable = true;
+
+   //         string query = "SELECT * FROM roles";
+			//var reader = DatabaseHelper.Instance.getData(query);
+
+			//MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+			//DataTable dt = new DataTable();
+			//DataAdapter.Fill(dt);
+
+			//DataGrid.DataSource = dt;
+			//DataGrid.Refresh();
+			//reader.Close();
+
+			//isOtherDataTable = true;
 		}
 
 		private bool IsNumeric(string input)
@@ -460,6 +476,8 @@ namespace ITEC_Event_Management_System
             DataAdapter.Fill(dt);
             DataGrid.DataSource = dt;
             DataGrid.Refresh();
+
+			isOtherDataTable = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -471,6 +489,8 @@ namespace ITEC_Event_Management_System
             DataAdapter.Fill(dt);
             DataGrid.DataSource = dt;
             DataGrid.Refresh();
+            isOtherDataTable = false;
+
 
         }
 
@@ -483,6 +503,8 @@ namespace ITEC_Event_Management_System
             DataAdapter.Fill(dt);
             DataGrid.DataSource = dt;
             DataGrid.Refresh();
+            isOtherDataTable = false;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -494,6 +516,8 @@ namespace ITEC_Event_Management_System
             DataAdapter.Fill(dt);
             DataGrid.DataSource = dt;
             DataGrid.Refresh();
+            isOtherDataTable = false;
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -504,6 +528,8 @@ namespace ITEC_Event_Management_System
             DataAdapter.Fill(dt);
             DataGrid.DataSource = dt;
             DataGrid.Refresh();
+            isOtherDataTable = false;
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -514,6 +540,8 @@ namespace ITEC_Event_Management_System
             DataAdapter.Fill(dt);
             DataGrid.DataSource = dt;
             DataGrid.Refresh();
+            isOtherDataTable = false;
+
         }
     }
 }

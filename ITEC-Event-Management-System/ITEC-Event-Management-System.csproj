@@ -104,7 +104,17 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="BL\Committee.cs" />
+    <Compile Include="BL\CommitteeMember.cs" />
+    <Compile Include="CommitteesAndMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommitteesAndMembers.Designer.cs">
+      <DependentUpon>CommitteesAndMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="DL\CommitteeDL.cs" />
+    <Compile Include="DL\CommitteeMemberDL.cs" />
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +133,8 @@
     <Compile Include="ITECEditions.Designer.cs">
       <DependentUpon>ITECEditions.cs</DependentUpon>
     </Compile>
+    <Compile Include="BL\Lookup.cs" />
+    <Compile Include="DL\LookupDataLayer.cs" />
     <Compile Include="Participants.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,9 @@
     </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommitteesAndMembers.resx">
+      <DependentUpon>CommitteesAndMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>

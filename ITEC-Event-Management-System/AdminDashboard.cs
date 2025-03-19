@@ -19,7 +19,7 @@ namespace ITEC_Event_Management_System
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            LoadForm(new Participants());
+            LoadForm(new CommitteesAndMembers());
         }
 
         private void LoadForm(object Form)
