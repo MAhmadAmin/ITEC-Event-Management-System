@@ -228,7 +228,7 @@ namespace ITEC_Event_Management_System
                 int result = DatabaseHelper.Instance.ExecuteQuery(query);
                 if (result == 0)
                 {
-                    MessageBox.Show("Could not delete edition in database\n\nUnknowen Error. Please Contact ITEC Management.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Could not delete venue in database\n\nUnknowen Error. Please Contact ITEC Management.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -304,6 +304,38 @@ namespace ITEC_Event_Management_System
             NameTextBox.Text = DataGrid.CurrentRow.Cells[1].Value.ToString();
             CapacityTextBox.Text = DataGrid.CurrentRow.Cells[2].Value.ToString();
             LocationTextBox.Text = DataGrid.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = $"Select * FROM venues WHERE venue_name LIKE '%{NameTextBox.Text}%'";
+            MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+            DataTable dt = new DataTable();
+            DataAdapter.Fill(dt);
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = string.IsNullOrEmpty(CapacityTextBox.Text) ? "SELECT * FROM venues WHERE Capacity is NULL" : $"SELECT * FROM venues WHERE capacity = {int.Parse(CapacityTextBox.Text)}";
+
+            MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+            DataTable dt = new DataTable();
+            DataAdapter.Fill(dt);
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string query = string.IsNullOrEmpty(LocationTextBox.Text) ? "SELECT * FROM venues WHERE location is NULL" : $"SELECT * FROM venues WHERE location LIKE '%{LocationTextBox.Text}%'";
+
+            MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+            DataTable dt = new DataTable();
+            DataAdapter.Fill(dt);
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
         }
     }
 }

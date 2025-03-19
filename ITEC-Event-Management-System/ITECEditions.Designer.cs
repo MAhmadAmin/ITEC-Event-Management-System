@@ -51,6 +51,9 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.RetrieveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.DataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.ButtonsPanel.SuspendLayout();
@@ -60,6 +63,9 @@
             // DataPanel
             // 
             this.DataPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DataPanel.Controls.Add(this.button2);
+            this.DataPanel.Controls.Add(this.button1);
+            this.DataPanel.Controls.Add(this.button6);
             this.DataPanel.Controls.Add(this.YearErrorLabel);
             this.DataPanel.Controls.Add(this.IDErrorLabel);
             this.DataPanel.Controls.Add(this.ErrorLabel);
@@ -182,9 +188,10 @@
             this.YearLabel.Location = new System.Drawing.Point(89, 95);
             this.YearLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.YearLabel.Name = "YearLabel";
-            this.YearLabel.Size = new System.Drawing.Size(49, 23);
+            this.YearLabel.Size = new System.Drawing.Size(53, 23);
             this.YearLabel.TabIndex = 0;
-            this.YearLabel.Text = "Year:";
+            this.YearLabel.Text = "Year*";
+            this.YearLabel.Click += new System.EventHandler(this.YearLabel_Click);
             // 
             // IDTextBox
             // 
@@ -389,6 +396,42 @@
             this.panel1.Size = new System.Drawing.Size(1200, 95);
             this.panel1.TabIndex = 10;
             // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.Location = new System.Drawing.Point(436, 96);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(24, 25);
+            this.button6.TabIndex = 25;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(436, 145);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 25);
+            this.button1.TabIndex = 26;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Location = new System.Drawing.Point(436, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 25);
+            this.button2.TabIndex = 27;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ITECEditions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,5 +483,8 @@
         private System.Windows.Forms.Label SuccessLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

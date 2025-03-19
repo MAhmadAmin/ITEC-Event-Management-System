@@ -40,14 +40,18 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DataGrid = new System.Windows.Forms.DataGridView();
             this.DataPanel = new System.Windows.Forms.Panel();
+            this.ShowRolesButton = new System.Windows.Forms.Button();
+            this.ShowEditionsButton = new System.Windows.Forms.Button();
+            this.RoleIDComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ITECIDComboBox = new System.Windows.Forms.ComboBox();
             this.InstituteTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.ITECIDLabel = new System.Windows.Forms.Label();
             this.ContactErrorLabel = new System.Windows.Forms.Label();
             this.ContactTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.EmailErrorLabel = new System.Windows.Forms.Label();
-            this.ITECIDLabel = new System.Windows.Forms.Label();
             this.ParticipantErrorLabel = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.ParticipantIDLabel = new System.Windows.Forms.Label();
@@ -56,10 +60,12 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.ParticipantIDTextBox = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
-            this.ITECIDComboBox = new System.Windows.Forms.ComboBox();
-            this.RoleIDComboBox = new System.Windows.Forms.ComboBox();
-            this.ShowEditionsButton = new System.Windows.Forms.Button();
-            this.ShowRolesButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -164,6 +170,7 @@
             this.DeleteButton.TabIndex = 9;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // UpdateButton
             // 
@@ -178,6 +185,7 @@
             this.UpdateButton.TabIndex = 8;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // RetrieveButton
             // 
@@ -225,6 +233,12 @@
             // DataPanel
             // 
             this.DataPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DataPanel.Controls.Add(this.button6);
+            this.DataPanel.Controls.Add(this.button5);
+            this.DataPanel.Controls.Add(this.button4);
+            this.DataPanel.Controls.Add(this.button3);
+            this.DataPanel.Controls.Add(this.button2);
+            this.DataPanel.Controls.Add(this.button1);
             this.DataPanel.Controls.Add(this.ShowRolesButton);
             this.DataPanel.Controls.Add(this.ShowEditionsButton);
             this.DataPanel.Controls.Add(this.RoleIDComboBox);
@@ -248,8 +262,50 @@
             this.DataPanel.Location = new System.Drawing.Point(202, 149);
             this.DataPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(463, 421);
+            this.DataPanel.Size = new System.Drawing.Size(499, 421);
             this.DataPanel.TabIndex = 15;
+            // 
+            // ShowRolesButton
+            // 
+            this.ShowRolesButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ShowRolesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowRolesButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowRolesButton.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowRolesButton.Location = new System.Drawing.Point(296, 347);
+            this.ShowRolesButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ShowRolesButton.Name = "ShowRolesButton";
+            this.ShowRolesButton.Size = new System.Drawing.Size(130, 27);
+            this.ShowRolesButton.TabIndex = 13;
+            this.ShowRolesButton.Text = "Show Roles";
+            this.ShowRolesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ShowRolesButton.UseVisualStyleBackColor = false;
+            this.ShowRolesButton.Click += new System.EventHandler(this.ShowRolesButton_Click);
+            // 
+            // ShowEditionsButton
+            // 
+            this.ShowEditionsButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ShowEditionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowEditionsButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowEditionsButton.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowEditionsButton.Location = new System.Drawing.Point(295, 294);
+            this.ShowEditionsButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ShowEditionsButton.Name = "ShowEditionsButton";
+            this.ShowEditionsButton.Size = new System.Drawing.Size(130, 27);
+            this.ShowEditionsButton.TabIndex = 12;
+            this.ShowEditionsButton.Text = "Show Editions";
+            this.ShowEditionsButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ShowEditionsButton.UseVisualStyleBackColor = false;
+            this.ShowEditionsButton.Click += new System.EventHandler(this.ShowEditionsButton_Click);
+            // 
+            // RoleIDComboBox
+            // 
+            this.RoleIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RoleIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleIDComboBox.FormattingEnabled = true;
+            this.RoleIDComboBox.Location = new System.Drawing.Point(153, 347);
+            this.RoleIDComboBox.Name = "RoleIDComboBox";
+            this.RoleIDComboBox.Size = new System.Drawing.Size(138, 26);
+            this.RoleIDComboBox.TabIndex = 5;
             // 
             // label5
             // 
@@ -265,6 +321,16 @@
             this.label5.Size = new System.Drawing.Size(72, 23);
             this.label5.TabIndex = 19;
             this.label5.Text = "Role ID:";
+            // 
+            // ITECIDComboBox
+            // 
+            this.ITECIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ITECIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ITECIDComboBox.FormattingEnabled = true;
+            this.ITECIDComboBox.Location = new System.Drawing.Point(153, 295);
+            this.ITECIDComboBox.Name = "ITECIDComboBox";
+            this.ITECIDComboBox.Size = new System.Drawing.Size(137, 26);
+            this.ITECIDComboBox.TabIndex = 4;
             // 
             // InstituteTextBox
             // 
@@ -289,6 +355,21 @@
             this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 17;
             this.label4.Text = "Institute:";
+            // 
+            // ITECIDLabel
+            // 
+            this.ITECIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ITECIDLabel.AutoSize = true;
+            this.ITECIDLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ITECIDLabel.ForeColor = System.Drawing.Color.Black;
+            this.ITECIDLabel.Location = new System.Drawing.Point(79, 298);
+            this.ITECIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ITECIDLabel.Name = "ITECIDLabel";
+            this.ITECIDLabel.Size = new System.Drawing.Size(69, 23);
+            this.ITECIDLabel.TabIndex = 9;
+            this.ITECIDLabel.Text = "ITEC ID:";
             // 
             // ContactErrorLabel
             // 
@@ -329,9 +410,9 @@
             this.label3.Location = new System.Drawing.Point(68, 187);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
+            this.label3.Size = new System.Drawing.Size(80, 23);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Contact:";
+            this.label3.Text = "Contact*";
             // 
             // EmailErrorLabel
             // 
@@ -349,21 +430,6 @@
             this.EmailErrorLabel.Text = "Invalid Email Format";
             this.EmailErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.EmailErrorLabel.Visible = false;
-            // 
-            // ITECIDLabel
-            // 
-            this.ITECIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ITECIDLabel.AutoSize = true;
-            this.ITECIDLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ITECIDLabel.ForeColor = System.Drawing.Color.Black;
-            this.ITECIDLabel.Location = new System.Drawing.Point(79, 298);
-            this.ITECIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ITECIDLabel.Name = "ITECIDLabel";
-            this.ITECIDLabel.Size = new System.Drawing.Size(69, 23);
-            this.ITECIDLabel.TabIndex = 9;
-            this.ITECIDLabel.Text = "ITEC ID:";
             // 
             // ParticipantErrorLabel
             // 
@@ -442,9 +508,10 @@
             this.NameLabel.Location = new System.Drawing.Point(87, 74);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(62, 23);
+            this.NameLabel.Size = new System.Drawing.Size(66, 23);
             this.NameLabel.TabIndex = 0;
-            this.NameLabel.Text = "Name:";
+            this.NameLabel.Text = "Name*";
+            this.NameLabel.Click += new System.EventHandler(this.NameLabel_Click);
             // 
             // ParticipantIDTextBox
             // 
@@ -472,61 +539,81 @@
             this.EmailLabel.Location = new System.Drawing.Point(86, 133);
             this.EmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(58, 23);
+            this.EmailLabel.Size = new System.Drawing.Size(62, 23);
             this.EmailLabel.TabIndex = 0;
-            this.EmailLabel.Text = "Email:";
+            this.EmailLabel.Text = "Email*";
             // 
-            // ITECIDComboBox
+            // button1
             // 
-            this.ITECIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ITECIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ITECIDComboBox.FormattingEnabled = true;
-            this.ITECIDComboBox.Location = new System.Drawing.Point(153, 295);
-            this.ITECIDComboBox.Name = "ITECIDComboBox";
-            this.ITECIDComboBox.Size = new System.Drawing.Size(137, 26);
-            this.ITECIDComboBox.TabIndex = 4;
+            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(447, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 25);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // RoleIDComboBox
+            // button2
             // 
-            this.RoleIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RoleIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleIDComboBox.FormattingEnabled = true;
-            this.RoleIDComboBox.Location = new System.Drawing.Point(153, 347);
-            this.RoleIDComboBox.Name = "RoleIDComboBox";
-            this.RoleIDComboBox.Size = new System.Drawing.Size(138, 26);
-            this.RoleIDComboBox.TabIndex = 5;
+            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Location = new System.Drawing.Point(447, 131);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 25);
+            this.button2.TabIndex = 20;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // ShowEditionsButton
+            // button3
             // 
-            this.ShowEditionsButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ShowEditionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShowEditionsButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowEditionsButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowEditionsButton.Location = new System.Drawing.Point(295, 294);
-            this.ShowEditionsButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ShowEditionsButton.Name = "ShowEditionsButton";
-            this.ShowEditionsButton.Size = new System.Drawing.Size(130, 27);
-            this.ShowEditionsButton.TabIndex = 12;
-            this.ShowEditionsButton.Text = "Show Editions";
-            this.ShowEditionsButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ShowEditionsButton.UseVisualStyleBackColor = false;
-            this.ShowEditionsButton.Click += new System.EventHandler(this.ShowEditionsButton_Click);
+            this.button3.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(447, 187);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 25);
+            this.button3.TabIndex = 21;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // ShowRolesButton
+            // button4
             // 
-            this.ShowRolesButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ShowRolesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShowRolesButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowRolesButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowRolesButton.Location = new System.Drawing.Point(296, 347);
-            this.ShowRolesButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ShowRolesButton.Name = "ShowRolesButton";
-            this.ShowRolesButton.Size = new System.Drawing.Size(130, 27);
-            this.ShowRolesButton.TabIndex = 13;
-            this.ShowRolesButton.Text = "Show Roles";
-            this.ShowRolesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ShowRolesButton.UseVisualStyleBackColor = false;
-            this.ShowRolesButton.Click += new System.EventHandler(this.ShowRolesButton_Click);
+            this.button4.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Location = new System.Drawing.Point(447, 243);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(24, 25);
+            this.button4.TabIndex = 22;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Location = new System.Drawing.Point(447, 296);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(24, 25);
+            this.button5.TabIndex = 23;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.Location = new System.Drawing.Point(447, 349);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(24, 25);
+            this.button6.TabIndex = 24;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Participants
             // 
@@ -586,5 +673,11 @@
         private System.Windows.Forms.ComboBox ITECIDComboBox;
         private System.Windows.Forms.Button ShowRolesButton;
         private System.Windows.Forms.Button ShowEditionsButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

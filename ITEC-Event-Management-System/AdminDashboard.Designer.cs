@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.SidePanelButtonsPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,12 +41,11 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.AdminPanelHeadning = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SidePanelButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).BeginInit();
             this.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -58,8 +58,19 @@
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(182, 729);
+            this.SidePanel.Size = new System.Drawing.Size(182, 961);
             this.SidePanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::ITEC_Event_Management_System.Properties.Resources.favpng_earth_globe_world_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 788);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // LogoutButton
             // 
@@ -71,7 +82,7 @@
             this.LogoutButton.ForeColor = System.Drawing.Color.White;
             this.LogoutButton.Image = global::ITEC_Event_Management_System.Properties.Resources.LogoutIcon;
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(22, 645);
+            this.LogoutButton.Location = new System.Drawing.Point(22, 877);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(129, 32);
             this.LogoutButton.TabIndex = 3;
@@ -185,7 +196,7 @@
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(182, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(802, 59);
+            this.TopPanel.Size = new System.Drawing.Size(1722, 59);
             this.TopPanel.TabIndex = 1;
             // 
             // AdminPanelHeadning
@@ -194,7 +205,7 @@
             this.AdminPanelHeadning.AutoSize = true;
             this.AdminPanelHeadning.Font = new System.Drawing.Font("Arial Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminPanelHeadning.ForeColor = System.Drawing.Color.DarkOrange;
-            this.AdminPanelHeadning.Location = new System.Drawing.Point(253, 0);
+            this.AdminPanelHeadning.Location = new System.Drawing.Point(713, 0);
             this.AdminPanelHeadning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdminPanelHeadning.Name = "AdminPanelHeadning";
             this.AdminPanelHeadning.Size = new System.Drawing.Size(281, 54);
@@ -206,25 +217,14 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(182, 59);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(802, 670);
+            this.MainPanel.Size = new System.Drawing.Size(1722, 902);
             this.MainPanel.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ITEC_Event_Management_System.Properties.Resources.favpng_earth_globe_world_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 556);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 83);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 729);
+            this.ClientSize = new System.Drawing.Size(1904, 961);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.SidePanel);
@@ -236,11 +236,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.SidePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SidePanelButtonsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).EndInit();
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

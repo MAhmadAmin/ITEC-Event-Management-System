@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LeftPanel = new System.Windows.Forms.Panel();
+            this.LeftPicture = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.ToggleShowPassword = new System.Windows.Forms.Label();
             this.SignupButton = new System.Windows.Forms.Button();
@@ -42,10 +43,9 @@
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.SignInLabel = new System.Windows.Forms.Label();
             this.ITECHeading = new System.Windows.Forms.Label();
-            this.LeftPicture = new System.Windows.Forms.PictureBox();
             this.LeftPanel.SuspendLayout();
-            this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPicture)).BeginInit();
+            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftPanel
@@ -58,6 +58,19 @@
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(250, 537);
             this.LeftPanel.TabIndex = 0;
+            // 
+            // LeftPicture
+            // 
+            this.LeftPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LeftPicture.Image = global::ITEC_Event_Management_System.Properties.Resources.favpng_earth_globe_world_icon;
+            this.LeftPicture.Location = new System.Drawing.Point(0, 0);
+            this.LeftPicture.Margin = new System.Windows.Forms.Padding(0);
+            this.LeftPicture.MinimumSize = new System.Drawing.Size(250, 487);
+            this.LeftPicture.Name = "LeftPicture";
+            this.LeftPicture.Size = new System.Drawing.Size(250, 537);
+            this.LeftPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LeftPicture.TabIndex = 0;
+            this.LeftPicture.TabStop = false;
             // 
             // TopPanel
             // 
@@ -230,19 +243,6 @@
             this.ITECHeading.TabIndex = 0;
             this.ITECHeading.Text = "ITEC Manager";
             // 
-            // LeftPicture
-            // 
-            this.LeftPicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LeftPicture.Image = global::ITEC_Event_Management_System.Properties.Resources.favpng_earth_globe_world_icon;
-            this.LeftPicture.Location = new System.Drawing.Point(0, 0);
-            this.LeftPicture.Margin = new System.Windows.Forms.Padding(0);
-            this.LeftPicture.MinimumSize = new System.Drawing.Size(250, 487);
-            this.LeftPicture.Name = "LeftPicture";
-            this.LeftPicture.Size = new System.Drawing.Size(250, 537);
-            this.LeftPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LeftPicture.TabIndex = 0;
-            this.LeftPicture.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,9 +259,9 @@
             this.Text = "ITEC Event Manager";
             this.Load += new System.EventHandler(this.Login_Load);
             this.LeftPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LeftPicture)).EndInit();
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

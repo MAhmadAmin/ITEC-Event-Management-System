@@ -51,6 +51,9 @@
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.LocationLabel = new System.Windows.Forms.Label();
             this.CapacityLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -220,6 +223,9 @@
             // DataPanel
             // 
             this.DataPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DataPanel.Controls.Add(this.button3);
+            this.DataPanel.Controls.Add(this.button1);
+            this.DataPanel.Controls.Add(this.button2);
             this.DataPanel.Controls.Add(this.CapacityErrorLabel);
             this.DataPanel.Controls.Add(this.IDErrorLabel);
             this.DataPanel.Controls.Add(this.ErrorLabel);
@@ -344,9 +350,9 @@
             this.NameLabel.Location = new System.Drawing.Point(89, 95);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(62, 23);
+            this.NameLabel.Size = new System.Drawing.Size(66, 23);
             this.NameLabel.TabIndex = 0;
-            this.NameLabel.Text = "Name:";
+            this.NameLabel.Text = "Name*";
             // 
             // IDTextBox
             // 
@@ -392,6 +398,42 @@
             this.CapacityLabel.Size = new System.Drawing.Size(82, 23);
             this.CapacityLabel.TabIndex = 0;
             this.CapacityLabel.Text = "Capacity:";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Location = new System.Drawing.Point(436, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 25);
+            this.button2.TabIndex = 28;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(436, 145);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 25);
+            this.button1.TabIndex = 29;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(436, 227);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 25);
+            this.button3.TabIndex = 30;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Venues
             // 
@@ -442,5 +484,8 @@
         private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.Label LocationLabel;
         private System.Windows.Forms.Label CapacityLabel;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

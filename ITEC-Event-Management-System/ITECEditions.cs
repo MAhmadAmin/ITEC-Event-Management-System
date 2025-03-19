@@ -290,5 +290,40 @@ namespace ITEC_Event_Management_System
             ThemeTextBox.Text = DataGrid.CurrentRow.Cells[2].Value.ToString();
             DescriptionTextBox.Text = DataGrid.CurrentRow.Cells[3].Value.ToString();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string query = $"Select * FROM itec_editions WHERE Year = {int.Parse(YearTextBox.Text)}";
+            MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+            DataTable dt = new DataTable();
+            DataAdapter.Fill(dt);
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = string.IsNullOrEmpty(ThemeTextBox.Text) ? "SELECT * FROM itec_editions WHERE theme IS NULL" : $"Select * FROM itec_editions WHERE theme Like '%{ThemeTextBox.Text}%'";
+            MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+            DataTable dt = new DataTable();
+            DataAdapter.Fill(dt);
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = string.IsNullOrEmpty(DescriptionTextBox.Text) ? "SELECT * FROM itec_editions WHERE Description IS NULL" : $"Select * FROM itec_editions WHERE description Like '%{DescriptionTextBox.Text}%'";
+            MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+            DataTable dt = new DataTable();
+            DataAdapter.Fill(dt);
+            DataGrid.DataSource = dt;
+            DataGrid.Refresh();
+        }
+
+        private void YearLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

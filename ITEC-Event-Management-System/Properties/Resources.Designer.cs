@@ -173,6 +173,26 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SearchIconOrange {
+            get {
+                object obj = ResourceManager.GetObject("SearchIconOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SearchIconThickOrange {
+            get {
+                object obj = ResourceManager.GetObject("SearchIconThickOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UET {
             get {
                 object obj = ResourceManager.GetObject("UET", resourceCulture);
