@@ -18,7 +18,7 @@ namespace ITEC_Event_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new Login());
-            Application.Run(new AdminDashboard());
+            Application.Run(new AdminDashboard("Ahmad"));
         }
     }
 }

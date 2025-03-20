@@ -54,7 +54,7 @@ namespace ITEC_Event_Management_System
 
 					if (role == "Admin")
 					{
-						AdminDashboard admin = new AdminDashboard();
+						AdminDashboard admin = new AdminDashboard(reader["username"].ToString());
 						admin.Show();
 						this.Hide();
 					}

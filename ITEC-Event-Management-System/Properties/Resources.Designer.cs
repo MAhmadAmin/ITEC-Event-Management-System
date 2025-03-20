@@ -203,6 +203,16 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SponsorIcon {
+            get {
+                object obj = ResourceManager.GetObject("SponsorIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UET {
             get {
                 object obj = ResourceManager.GetObject("UET", resourceCulture);
@@ -216,6 +226,16 @@ namespace ITEC_Event_Management_System.Properties {
         internal static System.Drawing.Bitmap VenueIcon {
             get {
                 object obj = ResourceManager.GetObject("VenueIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WavingHand {
+            get {
+                object obj = ResourceManager.GetObject("WavingHand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,14 +12,35 @@ namespace ITEC_Event_Management_System
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+        Color nonActiveColor = Color.Indigo;
+        Color ActiveColor = Color.Purple;
+        
+        
+
+        public AdminDashboard(string username)
         {
             InitializeComponent();
+            HowdyLabel.Text = $"Howdy, {username}!";
         }
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             LoadForm(new Sponsors());
+        }
+
+        private void UpdateButtons()
+        {
+            var buttons = new List<Button> { ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton };
+            foreach (var button in buttons)
+            {
+                button.BackColor = nonActiveColor;
+            }
+        }
+
+        private void ShowActive (Button button)
+        {
+            UpdateButtons();
+            button.BackColor = ActiveColor;
         }
 
         private void LoadForm(object Form)
@@ -36,35 +57,51 @@ namespace ITEC_Event_Management_System
 
         private void ITECEditionsButton_Click(object sender, EventArgs e)
         {
+            ShowActive(ITECEditionsButton);
             LoadForm(new ITECEditions());
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login login = new Login();
-            login.Show();
+            var result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
         }
 
         private void EventsButton_Click(object sender, EventArgs e)
         {
+            ShowActive(EventsButton);
             LoadForm(new Events());
         }
 
         private void VenuesButton_Click(object sender, EventArgs e)
         {
+            ShowActive(VenuesButton);
             LoadForm(new Venues());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ShowActive(ParticipantsButton);
             LoadForm(new Participants());
+
         }
 
         private void CommitteeAndMembersButton_Click(object sender, EventArgs e)
         {
 
+            ShowActive(CommitteeAndMembersButton);
             LoadForm(new CommitteesAndMembers());
+        }
+
+        private void SponsorsButton_Click(object sender, EventArgs e)
+        {
+            ShowActive(SponsorsButton);
+            LoadForm(new Sponsors());
         }
     }
 }
