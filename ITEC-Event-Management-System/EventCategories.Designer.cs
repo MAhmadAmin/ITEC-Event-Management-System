@@ -1,6 +1,6 @@
 ﻿namespace ITEC_Event_Management_System
 {
-    partial class Sponsors
+    partial class EventCategories
     {
         /// <summary>
         /// Required designer variable.
@@ -40,17 +40,13 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DataGrid = new System.Windows.Forms.DataGridView();
             this.DataPanel = new System.Windows.Forms.Panel();
-            this.ContactErrorLabel = new System.Windows.Forms.Label();
+            this.NameSearchButton = new System.Windows.Forms.Button();
             this.IDErrorLabel = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.IDLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.ContactTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.IDTextBox = new System.Windows.Forms.TextBox();
-            this.CapacityLabel = new System.Windows.Forms.Label();
-            this.ContactSearchButton = new System.Windows.Forms.Button();
-            this.NameSearchButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -64,8 +60,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1184, 95);
-            this.panel1.TabIndex = 18;
+            this.panel1.Size = new System.Drawing.Size(1316, 95);
+            this.panel1.TabIndex = 22;
             // 
             // VenuesHeading
             // 
@@ -73,13 +69,13 @@
             this.VenuesHeading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.VenuesHeading.AutoSize = true;
             this.VenuesHeading.Font = new System.Drawing.Font("Product Sans Black", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VenuesHeading.ForeColor = System.Drawing.Color.Crimson;
-            this.VenuesHeading.Location = new System.Drawing.Point(448, 37);
+            this.VenuesHeading.ForeColor = System.Drawing.Color.Purple;
+            this.VenuesHeading.Location = new System.Drawing.Point(514, 37);
             this.VenuesHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VenuesHeading.Name = "VenuesHeading";
-            this.VenuesHeading.Size = new System.Drawing.Size(195, 51);
+            this.VenuesHeading.Size = new System.Drawing.Size(346, 51);
             this.VenuesHeading.TabIndex = 0;
-            this.VenuesHeading.Text = "Sponsors";
+            this.VenuesHeading.Text = "Event Categories";
             this.VenuesHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonsPanel
@@ -92,10 +88,10 @@
             this.ButtonsPanel.Controls.Add(this.UpdateButton);
             this.ButtonsPanel.Controls.Add(this.RetrieveButton);
             this.ButtonsPanel.Controls.Add(this.AddButton);
-            this.ButtonsPanel.Location = new System.Drawing.Point(101, 483);
+            this.ButtonsPanel.Location = new System.Drawing.Point(124, 408);
             this.ButtonsPanel.Name = "ButtonsPanel";
-            this.ButtonsPanel.Size = new System.Drawing.Size(470, 233);
-            this.ButtonsPanel.TabIndex = 16;
+            this.ButtonsPanel.Size = new System.Drawing.Size(470, 197);
+            this.ButtonsPanel.TabIndex = 20;
             // 
             // label1
             // 
@@ -210,47 +206,38 @@
             this.DataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid.Location = new System.Drawing.Point(668, 104);
+            this.DataGrid.Location = new System.Drawing.Point(668, 158);
             this.DataGrid.Name = "DataGrid";
-            this.DataGrid.Size = new System.Drawing.Size(475, 638);
-            this.DataGrid.TabIndex = 17;
+            this.DataGrid.Size = new System.Drawing.Size(475, 467);
+            this.DataGrid.TabIndex = 21;
             // 
             // DataPanel
             // 
             this.DataPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DataPanel.Controls.Add(this.ContactSearchButton);
             this.DataPanel.Controls.Add(this.NameSearchButton);
-            this.DataPanel.Controls.Add(this.ContactErrorLabel);
             this.DataPanel.Controls.Add(this.IDErrorLabel);
             this.DataPanel.Controls.Add(this.ErrorLabel);
             this.DataPanel.Controls.Add(this.IDLabel);
             this.DataPanel.Controls.Add(this.NameTextBox);
-            this.DataPanel.Controls.Add(this.ContactTextBox);
             this.DataPanel.Controls.Add(this.NameLabel);
             this.DataPanel.Controls.Add(this.IDTextBox);
-            this.DataPanel.Controls.Add(this.CapacityLabel);
-            this.DataPanel.Location = new System.Drawing.Point(101, 132);
+            this.DataPanel.Location = new System.Drawing.Point(131, 158);
             this.DataPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(463, 310);
-            this.DataPanel.TabIndex = 15;
+            this.DataPanel.Size = new System.Drawing.Size(463, 166);
+            this.DataPanel.TabIndex = 19;
             // 
-            // ContactErrorLabel
+            // NameSearchButton
             // 
-            this.ContactErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContactErrorLabel.AutoSize = true;
-            this.ContactErrorLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ContactErrorLabel.Location = new System.Drawing.Point(295, 171);
-            this.ContactErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ContactErrorLabel.Name = "ContactErrorLabel";
-            this.ContactErrorLabel.Size = new System.Drawing.Size(136, 17);
-            this.ContactErrorLabel.TabIndex = 8;
-            this.ContactErrorLabel.Text = "Invalid Contact Format";
-            this.ContactErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ContactErrorLabel.Visible = false;
+            this.NameSearchButton.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.NameSearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.NameSearchButton.FlatAppearance.BorderSize = 0;
+            this.NameSearchButton.Location = new System.Drawing.Point(436, 95);
+            this.NameSearchButton.Name = "NameSearchButton";
+            this.NameSearchButton.Size = new System.Drawing.Size(24, 25);
+            this.NameSearchButton.TabIndex = 28;
+            this.NameSearchButton.UseVisualStyleBackColor = true;
+            this.NameSearchButton.Click += new System.EventHandler(this.NameSearchButton_Click);
             // 
             // IDErrorLabel
             // 
@@ -308,16 +295,6 @@
             this.NameTextBox.TabIndex = 0;
             this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
-            // ContactTextBox
-            // 
-            this.ContactTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactTextBox.Location = new System.Drawing.Point(153, 146);
-            this.ContactTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.ContactTextBox.Name = "ContactTextBox";
-            this.ContactTextBox.Size = new System.Drawing.Size(278, 24);
-            this.ContactTextBox.TabIndex = 2;
-            this.ContactTextBox.TextChanged += new System.EventHandler(this.ContactTextBox_TextChanged);
-            // 
             // NameLabel
             // 
             this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -348,58 +325,20 @@
             this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
             this.IDTextBox.Leave += new System.EventHandler(this.IDTextBox_Leave);
             // 
-            // CapacityLabel
-            // 
-            this.CapacityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CapacityLabel.AutoSize = true;
-            this.CapacityLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CapacityLabel.ForeColor = System.Drawing.Color.Black;
-            this.CapacityLabel.Location = new System.Drawing.Point(72, 147);
-            this.CapacityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CapacityLabel.Name = "CapacityLabel";
-            this.CapacityLabel.Size = new System.Drawing.Size(76, 23);
-            this.CapacityLabel.TabIndex = 0;
-            this.CapacityLabel.Text = "Contact:";
-            // 
-            // ContactSearchButton
-            // 
-            this.ContactSearchButton.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.ContactSearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ContactSearchButton.FlatAppearance.BorderSize = 0;
-            this.ContactSearchButton.Location = new System.Drawing.Point(436, 145);
-            this.ContactSearchButton.Name = "ContactSearchButton";
-            this.ContactSearchButton.Size = new System.Drawing.Size(24, 25);
-            this.ContactSearchButton.TabIndex = 29;
-            this.ContactSearchButton.UseVisualStyleBackColor = true;
-            this.ContactSearchButton.Click += new System.EventHandler(this.ContactSearchButton_Click);
-            // 
-            // NameSearchButton
-            // 
-            this.NameSearchButton.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.NameSearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.NameSearchButton.FlatAppearance.BorderSize = 0;
-            this.NameSearchButton.Location = new System.Drawing.Point(436, 95);
-            this.NameSearchButton.Name = "NameSearchButton";
-            this.NameSearchButton.Size = new System.Drawing.Size(24, 25);
-            this.NameSearchButton.TabIndex = 28;
-            this.NameSearchButton.UseVisualStyleBackColor = true;
-            this.NameSearchButton.Click += new System.EventHandler(this.NameSearchButton_Click);
-            // 
-            // Sponsors
+            // EventCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1184, 811);
+            this.ClientSize = new System.Drawing.Size(1316, 850);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.DataPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Sponsors";
-            this.Text = "Sponsors";
+            this.Name = "EventCategories";
+            this.Text = "EventCategories";
+            this.Load += new System.EventHandler(this.EventCategories_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ButtonsPanel.ResumeLayout(false);
@@ -425,16 +364,12 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.Panel DataPanel;
-        private System.Windows.Forms.Button ContactSearchButton;
         private System.Windows.Forms.Button NameSearchButton;
-        private System.Windows.Forms.Label ContactErrorLabel;
         private System.Windows.Forms.Label IDErrorLabel;
         private System.Windows.Forms.Label ErrorLabel;
         private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox ContactTextBox;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.TextBox IDTextBox;
-        private System.Windows.Forms.Label CapacityLabel;
     }
 }

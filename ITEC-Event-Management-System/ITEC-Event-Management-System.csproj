@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="BL\Committee.cs" />
     <Compile Include="BL\CommitteeMember.cs" />
+    <Compile Include="BL\EventCategory.cs" />
     <Compile Include="BL\Sponsor.cs" />
     <Compile Include="CommitteesAndMembers.cs">
       <SubType>Form</SubType>
@@ -144,7 +145,14 @@
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="DL\CommitteeDL.cs" />
     <Compile Include="DL\CommitteeMemberDL.cs" />
+    <Compile Include="DL\EventCategoryDL.cs" />
     <Compile Include="DL\SponsorDL.cs" />
+    <Compile Include="EventCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventCategories.Designer.cs">
+      <DependentUpon>EventCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommitteesAndMembers.resx">
       <DependentUpon>CommitteesAndMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventCategories.resx">
+      <DependentUpon>EventCategories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>
@@ -308,6 +319,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WavingHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EventCategory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EventCategory23.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.HowdyLabel = new System.Windows.Forms.Label();
             this.SidePanelButtonsPanel = new System.Windows.Forms.Panel();
             this.HowdyImageBox = new System.Windows.Forms.Panel();
             this.AdminPanelHeadning = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.HowdyLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.EventCategoriesButton = new System.Windows.Forms.Button();
             this.SponsorsButton = new System.Windows.Forms.Button();
             this.CommitteeAndMembersButton = new System.Windows.Forms.Button();
             this.ParticipantsButton = new System.Windows.Forms.Button();
@@ -68,9 +69,23 @@
             this.SidePanel.Size = new System.Drawing.Size(224, 961);
             this.SidePanel.TabIndex = 0;
             // 
+            // HowdyLabel
+            // 
+            this.HowdyLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.HowdyLabel.AutoSize = true;
+            this.HowdyLabel.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HowdyLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.HowdyLabel.Location = new System.Drawing.Point(48, 30);
+            this.HowdyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HowdyLabel.Name = "HowdyLabel";
+            this.HowdyLabel.Size = new System.Drawing.Size(84, 27);
+            this.HowdyLabel.TabIndex = 4;
+            this.HowdyLabel.Text = "Howdy";
+            // 
             // SidePanelButtonsPanel
             // 
             this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SidePanelButtonsPanel.Controls.Add(this.EventCategoriesButton);
             this.SidePanelButtonsPanel.Controls.Add(this.SponsorsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.CommitteeAndMembersButton);
             this.SidePanelButtonsPanel.Controls.Add(this.ParticipantsButton);
@@ -98,7 +113,7 @@
             this.AdminPanelHeadning.AutoSize = true;
             this.AdminPanelHeadning.Font = new System.Drawing.Font("Arial Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminPanelHeadning.ForeColor = System.Drawing.Color.Transparent;
-            this.AdminPanelHeadning.Location = new System.Drawing.Point(661, 19);
+            this.AdminPanelHeadning.Location = new System.Drawing.Point(565, 19);
             this.AdminPanelHeadning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdminPanelHeadning.Name = "AdminPanelHeadning";
             this.AdminPanelHeadning.Size = new System.Drawing.Size(445, 54);
@@ -112,19 +127,6 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1680, 874);
             this.MainPanel.TabIndex = 2;
-            // 
-            // HowdyLabel
-            // 
-            this.HowdyLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.HowdyLabel.AutoSize = true;
-            this.HowdyLabel.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HowdyLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.HowdyLabel.Location = new System.Drawing.Point(48, 30);
-            this.HowdyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.HowdyLabel.Name = "HowdyLabel";
-            this.HowdyLabel.Size = new System.Drawing.Size(84, 27);
-            this.HowdyLabel.TabIndex = 4;
-            this.HowdyLabel.Text = "Howdy";
             // 
             // pictureBox2
             // 
@@ -166,6 +168,25 @@
             this.LogoutButton.Text = "Log out";
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            // 
+            // EventCategoriesButton
+            // 
+            this.EventCategoriesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EventCategoriesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EventCategoriesButton.FlatAppearance.BorderSize = 0;
+            this.EventCategoriesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EventCategoriesButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventCategoriesButton.ForeColor = System.Drawing.Color.White;
+            this.EventCategoriesButton.Image = global::ITEC_Event_Management_System.Properties.Resources.EventCategory23;
+            this.EventCategoriesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EventCategoriesButton.Location = new System.Drawing.Point(6, 285);
+            this.EventCategoriesButton.Name = "EventCategoriesButton";
+            this.EventCategoriesButton.Size = new System.Drawing.Size(217, 33);
+            this.EventCategoriesButton.TabIndex = 8;
+            this.EventCategoriesButton.Text = "         Event Categories";
+            this.EventCategoriesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EventCategoriesButton.UseVisualStyleBackColor = true;
+            this.EventCategoriesButton.Click += new System.EventHandler(this.EventCategoriesButton_Click);
             // 
             // SponsorsButton
             // 
@@ -339,5 +360,6 @@
         private System.Windows.Forms.Button SponsorsButton;
         private System.Windows.Forms.Label HowdyLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button EventCategoriesButton;
     }
 }
