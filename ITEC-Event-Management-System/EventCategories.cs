@@ -70,6 +70,7 @@ namespace ITEC_Event_Management_System
                 UpdateButton.BackColor = Color.Gray;
             }
         }
+
         public string CapitalizeEachWord(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -78,6 +79,7 @@ namespace ITEC_Event_Management_System
             return string.Join(" ", input.Split(' ')
                 .Select(word => char.ToUpper(word[0]) + word.Substring(1).ToLower()));
         }
+
         private void IDTextBox_Click(object sender, EventArgs e)
         {
             if (IDTextBox.Text == "auto increment")
