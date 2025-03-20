@@ -40,6 +40,16 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DataGrid = new System.Windows.Forms.DataGridView();
             this.DataPanel = new System.Windows.Forms.Panel();
+            this.SearchCommitteeID = new System.Windows.Forms.Button();
+            this.SearchVenueID = new System.Windows.Forms.Button();
+            this.ShowCommitteesButton = new System.Windows.Forms.Button();
+            this.ShowVenuesButton = new System.Windows.Forms.Button();
+            this.CommitteeIDComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.VenueIDComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.DatePicker = new System.Windows.Forms.DateTimePicker();
             this.SearchCategoryID = new System.Windows.Forms.Button();
             this.SearchITECID = new System.Windows.Forms.Button();
             this.SearchDescription = new System.Windows.Forms.Button();
@@ -52,23 +62,13 @@
             this.ITECIDComboBox = new System.Windows.Forms.ComboBox();
             this.ITECIDLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ParticipantErrorLabel = new System.Windows.Forms.Label();
+            this.IDErrorLabel = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.EventIDLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
-            this.DatePicker = new System.Windows.Forms.DateTimePicker();
-            this.LocationTextBox = new System.Windows.Forms.TextBox();
-            this.SearchCommitteeID = new System.Windows.Forms.Button();
-            this.SearchVenueID = new System.Windows.Forms.Button();
-            this.ShowCommitteesButton = new System.Windows.Forms.Button();
-            this.ShowVenuesButton = new System.Windows.Forms.Button();
-            this.CommitteeIDComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.VenueIDComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
@@ -81,7 +81,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1400, 95);
+            this.panel1.Size = new System.Drawing.Size(1401, 95);
             this.panel1.TabIndex = 22;
             // 
             // EventsHeading
@@ -109,7 +109,7 @@
             this.ButtonsPanel.Controls.Add(this.UpdateButton);
             this.ButtonsPanel.Controls.Add(this.RetrieveButton);
             this.ButtonsPanel.Controls.Add(this.AddButton);
-            this.ButtonsPanel.Location = new System.Drawing.Point(207, 601);
+            this.ButtonsPanel.Location = new System.Drawing.Point(207, 616);
             this.ButtonsPanel.Name = "ButtonsPanel";
             this.ButtonsPanel.Size = new System.Drawing.Size(499, 189);
             this.ButtonsPanel.TabIndex = 20;
@@ -158,6 +158,7 @@
             this.ShowAllButton.TabIndex = 10;
             this.ShowAllButton.Text = "Show All";
             this.ShowAllButton.UseVisualStyleBackColor = false;
+            this.ShowAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
             // 
             // DeleteButton
             // 
@@ -172,6 +173,7 @@
             this.DeleteButton.TabIndex = 9;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // UpdateButton
             // 
@@ -186,6 +188,7 @@
             this.UpdateButton.TabIndex = 8;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // RetrieveButton
             // 
@@ -200,6 +203,7 @@
             this.RetrieveButton.TabIndex = 7;
             this.RetrieveButton.Text = "Retrieve";
             this.RetrieveButton.UseVisualStyleBackColor = false;
+            this.RetrieveButton.Click += new System.EventHandler(this.RetrieveButton_Click);
             // 
             // AddButton
             // 
@@ -214,6 +218,7 @@
             this.AddButton.TabIndex = 6;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DataGrid
             // 
@@ -222,10 +227,11 @@
             this.DataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid.Location = new System.Drawing.Point(769, 119);
+            this.DataGrid.Location = new System.Drawing.Point(769, 134);
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.Size = new System.Drawing.Size(601, 638);
             this.DataGrid.TabIndex = 21;
+            this.DataGrid.DoubleClick += new System.EventHandler(this.DataGrid_DoubleClick);
             // 
             // DataPanel
             // 
@@ -238,7 +244,7 @@
             this.DataPanel.Controls.Add(this.label2);
             this.DataPanel.Controls.Add(this.VenueIDComboBox);
             this.DataPanel.Controls.Add(this.label4);
-            this.DataPanel.Controls.Add(this.LocationTextBox);
+            this.DataPanel.Controls.Add(this.DescriptionTextBox);
             this.DataPanel.Controls.Add(this.DatePicker);
             this.DataPanel.Controls.Add(this.SearchCategoryID);
             this.DataPanel.Controls.Add(this.SearchITECID);
@@ -252,18 +258,149 @@
             this.DataPanel.Controls.Add(this.ITECIDComboBox);
             this.DataPanel.Controls.Add(this.ITECIDLabel);
             this.DataPanel.Controls.Add(this.label3);
-            this.DataPanel.Controls.Add(this.ParticipantErrorLabel);
+            this.DataPanel.Controls.Add(this.IDErrorLabel);
             this.DataPanel.Controls.Add(this.ErrorLabel);
             this.DataPanel.Controls.Add(this.EventIDLabel);
             this.DataPanel.Controls.Add(this.NameTextBox);
             this.DataPanel.Controls.Add(this.NameLabel);
             this.DataPanel.Controls.Add(this.IDTextBox);
             this.DataPanel.Controls.Add(this.EmailLabel);
-            this.DataPanel.Location = new System.Drawing.Point(207, 119);
+            this.DataPanel.Location = new System.Drawing.Point(207, 134);
             this.DataPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DataPanel.Name = "DataPanel";
             this.DataPanel.Size = new System.Drawing.Size(499, 476);
             this.DataPanel.TabIndex = 19;
+            // 
+            // SearchCommitteeID
+            // 
+            this.SearchCommitteeID.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.SearchCommitteeID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SearchCommitteeID.FlatAppearance.BorderSize = 0;
+            this.SearchCommitteeID.Location = new System.Drawing.Point(447, 428);
+            this.SearchCommitteeID.Name = "SearchCommitteeID";
+            this.SearchCommitteeID.Size = new System.Drawing.Size(24, 25);
+            this.SearchCommitteeID.TabIndex = 33;
+            this.SearchCommitteeID.UseVisualStyleBackColor = true;
+            this.SearchCommitteeID.Click += new System.EventHandler(this.SearchCommitteeID_Click);
+            // 
+            // SearchVenueID
+            // 
+            this.SearchVenueID.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.SearchVenueID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SearchVenueID.FlatAppearance.BorderSize = 0;
+            this.SearchVenueID.Location = new System.Drawing.Point(447, 375);
+            this.SearchVenueID.Name = "SearchVenueID";
+            this.SearchVenueID.Size = new System.Drawing.Size(24, 25);
+            this.SearchVenueID.TabIndex = 32;
+            this.SearchVenueID.UseVisualStyleBackColor = true;
+            this.SearchVenueID.Click += new System.EventHandler(this.SearchVenueID_Click);
+            // 
+            // ShowCommitteesButton
+            // 
+            this.ShowCommitteesButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ShowCommitteesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowCommitteesButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowCommitteesButton.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowCommitteesButton.Location = new System.Drawing.Point(296, 426);
+            this.ShowCommitteesButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ShowCommitteesButton.Name = "ShowCommitteesButton";
+            this.ShowCommitteesButton.Size = new System.Drawing.Size(130, 27);
+            this.ShowCommitteesButton.TabIndex = 30;
+            this.ShowCommitteesButton.Text = "Show Committees";
+            this.ShowCommitteesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ShowCommitteesButton.UseVisualStyleBackColor = false;
+            this.ShowCommitteesButton.Click += new System.EventHandler(this.ShowCommitteesButton_Click);
+            // 
+            // ShowVenuesButton
+            // 
+            this.ShowVenuesButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ShowVenuesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowVenuesButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowVenuesButton.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowVenuesButton.Location = new System.Drawing.Point(295, 373);
+            this.ShowVenuesButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ShowVenuesButton.Name = "ShowVenuesButton";
+            this.ShowVenuesButton.Size = new System.Drawing.Size(130, 27);
+            this.ShowVenuesButton.TabIndex = 29;
+            this.ShowVenuesButton.Text = "Show Venues";
+            this.ShowVenuesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ShowVenuesButton.UseVisualStyleBackColor = false;
+            this.ShowVenuesButton.Click += new System.EventHandler(this.ShowVenuesButton_Click);
+            // 
+            // CommitteeIDComboBox
+            // 
+            this.CommitteeIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CommitteeIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CommitteeIDComboBox.FormattingEnabled = true;
+            this.CommitteeIDComboBox.Location = new System.Drawing.Point(153, 426);
+            this.CommitteeIDComboBox.Name = "CommitteeIDComboBox";
+            this.CommitteeIDComboBox.Size = new System.Drawing.Size(138, 26);
+            this.CommitteeIDComboBox.TabIndex = 27;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(25, 430);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 23);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Committee ID:";
+            // 
+            // VenueIDComboBox
+            // 
+            this.VenueIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VenueIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VenueIDComboBox.FormattingEnabled = true;
+            this.VenueIDComboBox.Location = new System.Drawing.Point(153, 374);
+            this.VenueIDComboBox.Name = "VenueIDComboBox";
+            this.VenueIDComboBox.Size = new System.Drawing.Size(137, 26);
+            this.VenueIDComboBox.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(62, 377);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 23);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Venue ID:";
+            // 
+            // DescriptionTextBox
+            // 
+            this.DescriptionTextBox.AcceptsReturn = true;
+            this.DescriptionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptionTextBox.Location = new System.Drawing.Point(153, 173);
+            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.DescriptionTextBox.Multiline = true;
+            this.DescriptionTextBox.Name = "DescriptionTextBox";
+            this.DescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DescriptionTextBox.Size = new System.Drawing.Size(278, 72);
+            this.DescriptionTextBox.TabIndex = 25;
+            // 
+            // DatePicker
+            // 
+            this.DatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DatePicker.Location = new System.Drawing.Point(153, 123);
+            this.DatePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.DatePicker.MinimumSize = new System.Drawing.Size(200, 24);
+            this.DatePicker.Name = "DatePicker";
+            this.DatePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DatePicker.Size = new System.Drawing.Size(278, 24);
+            this.DatePicker.TabIndex = 11;
+            this.DatePicker.Value = new System.DateTime(2025, 3, 20, 0, 0, 0, 0);
             // 
             // SearchCategoryID
             // 
@@ -275,6 +412,7 @@
             this.SearchCategoryID.Size = new System.Drawing.Size(24, 25);
             this.SearchCategoryID.TabIndex = 24;
             this.SearchCategoryID.UseVisualStyleBackColor = true;
+            this.SearchCategoryID.Click += new System.EventHandler(this.SearchCategoryID_Click);
             // 
             // SearchITECID
             // 
@@ -286,6 +424,7 @@
             this.SearchITECID.Size = new System.Drawing.Size(24, 25);
             this.SearchITECID.TabIndex = 23;
             this.SearchITECID.UseVisualStyleBackColor = true;
+            this.SearchITECID.Click += new System.EventHandler(this.SearchITECID_Click);
             // 
             // SearchDescription
             // 
@@ -297,7 +436,7 @@
             this.SearchDescription.Size = new System.Drawing.Size(24, 25);
             this.SearchDescription.TabIndex = 21;
             this.SearchDescription.UseVisualStyleBackColor = true;
-            this.SearchDescription.Click += new System.EventHandler(this.button3_Click);
+            this.SearchDescription.Click += new System.EventHandler(this.SearchDescription_Click);
             // 
             // SearchDate
             // 
@@ -309,6 +448,7 @@
             this.SearchDate.Size = new System.Drawing.Size(24, 25);
             this.SearchDate.TabIndex = 20;
             this.SearchDate.UseVisualStyleBackColor = true;
+            this.SearchDate.Click += new System.EventHandler(this.SearchDate_Click);
             // 
             // SearchName
             // 
@@ -320,6 +460,7 @@
             this.SearchName.Size = new System.Drawing.Size(24, 25);
             this.SearchName.TabIndex = 19;
             this.SearchName.UseVisualStyleBackColor = true;
+            this.SearchName.Click += new System.EventHandler(this.SearchName_Click);
             // 
             // ShowCategoriesButton
             // 
@@ -335,6 +476,7 @@
             this.ShowCategoriesButton.Text = "Show Categories";
             this.ShowCategoriesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ShowCategoriesButton.UseVisualStyleBackColor = false;
+            this.ShowCategoriesButton.Click += new System.EventHandler(this.ShowCategoriesButton_Click);
             // 
             // ShowEditionsButton
             // 
@@ -350,6 +492,7 @@
             this.ShowEditionsButton.Text = "Show Editions";
             this.ShowEditionsButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ShowEditionsButton.UseVisualStyleBackColor = false;
+            this.ShowEditionsButton.Click += new System.EventHandler(this.ShowEditionsButton_Click);
             // 
             // CategoryIDComboBox
             // 
@@ -415,24 +558,23 @@
             this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "Description:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // ParticipantErrorLabel
+            // IDErrorLabel
             // 
-            this.ParticipantErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.IDErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ParticipantErrorLabel.AutoSize = true;
-            this.ParticipantErrorLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParticipantErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ParticipantErrorLabel.Location = new System.Drawing.Point(295, 38);
-            this.ParticipantErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ParticipantErrorLabel.Name = "ParticipantErrorLabel";
-            this.ParticipantErrorLabel.Size = new System.Drawing.Size(136, 17);
-            this.ParticipantErrorLabel.TabIndex = 8;
-            this.ParticipantErrorLabel.Text = "ID can only be numeric";
-            this.ParticipantErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ParticipantErrorLabel.Visible = false;
+            this.IDErrorLabel.AutoSize = true;
+            this.IDErrorLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.IDErrorLabel.Location = new System.Drawing.Point(295, 38);
+            this.IDErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.IDErrorLabel.Name = "IDErrorLabel";
+            this.IDErrorLabel.Size = new System.Drawing.Size(136, 17);
+            this.IDErrorLabel.TabIndex = 8;
+            this.IDErrorLabel.Text = "ID can only be numeric";
+            this.IDErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.IDErrorLabel.Visible = false;
             // 
             // ErrorLabel
             // 
@@ -471,6 +613,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(278, 24);
             this.NameTextBox.TabIndex = 0;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // NameLabel
             // 
@@ -498,6 +641,9 @@
             this.IDTextBox.TabIndex = 11;
             this.IDTextBox.TabStop = false;
             this.IDTextBox.Text = "auto increment";
+            this.IDTextBox.Click += new System.EventHandler(this.IDTextBox_Click);
+            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
+            this.IDTextBox.Leave += new System.EventHandler(this.IDTextBox_Leave);
             // 
             // EmailLabel
             // 
@@ -514,138 +660,12 @@
             this.EmailLabel.TabIndex = 0;
             this.EmailLabel.Text = "Date:";
             // 
-            // DatePicker
-            // 
-            this.DatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePicker.Location = new System.Drawing.Point(153, 123);
-            this.DatePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.DatePicker.MinimumSize = new System.Drawing.Size(200, 24);
-            this.DatePicker.Name = "DatePicker";
-            this.DatePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DatePicker.Size = new System.Drawing.Size(278, 24);
-            this.DatePicker.TabIndex = 11;
-            // 
-            // LocationTextBox
-            // 
-            this.LocationTextBox.AcceptsReturn = true;
-            this.LocationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocationTextBox.Location = new System.Drawing.Point(153, 173);
-            this.LocationTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.LocationTextBox.Multiline = true;
-            this.LocationTextBox.Name = "LocationTextBox";
-            this.LocationTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LocationTextBox.Size = new System.Drawing.Size(278, 72);
-            this.LocationTextBox.TabIndex = 25;
-            this.LocationTextBox.TextChanged += new System.EventHandler(this.LocationTextBox_TextChanged);
-            // 
-            // SearchCommitteeID
-            // 
-            this.SearchCommitteeID.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.SearchCommitteeID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SearchCommitteeID.FlatAppearance.BorderSize = 0;
-            this.SearchCommitteeID.Location = new System.Drawing.Point(447, 428);
-            this.SearchCommitteeID.Name = "SearchCommitteeID";
-            this.SearchCommitteeID.Size = new System.Drawing.Size(24, 25);
-            this.SearchCommitteeID.TabIndex = 33;
-            this.SearchCommitteeID.UseVisualStyleBackColor = true;
-            // 
-            // SearchVenueID
-            // 
-            this.SearchVenueID.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.SearchVenueID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SearchVenueID.FlatAppearance.BorderSize = 0;
-            this.SearchVenueID.Location = new System.Drawing.Point(447, 375);
-            this.SearchVenueID.Name = "SearchVenueID";
-            this.SearchVenueID.Size = new System.Drawing.Size(24, 25);
-            this.SearchVenueID.TabIndex = 32;
-            this.SearchVenueID.UseVisualStyleBackColor = true;
-            // 
-            // ShowCommitteesButton
-            // 
-            this.ShowCommitteesButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ShowCommitteesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShowCommitteesButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowCommitteesButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowCommitteesButton.Location = new System.Drawing.Point(296, 426);
-            this.ShowCommitteesButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ShowCommitteesButton.Name = "ShowCommitteesButton";
-            this.ShowCommitteesButton.Size = new System.Drawing.Size(130, 27);
-            this.ShowCommitteesButton.TabIndex = 30;
-            this.ShowCommitteesButton.Text = "Show Committees";
-            this.ShowCommitteesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ShowCommitteesButton.UseVisualStyleBackColor = false;
-            // 
-            // ShowVenuesButton
-            // 
-            this.ShowVenuesButton.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ShowVenuesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShowVenuesButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowVenuesButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowVenuesButton.Location = new System.Drawing.Point(295, 373);
-            this.ShowVenuesButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ShowVenuesButton.Name = "ShowVenuesButton";
-            this.ShowVenuesButton.Size = new System.Drawing.Size(130, 27);
-            this.ShowVenuesButton.TabIndex = 29;
-            this.ShowVenuesButton.Text = "Show Venues";
-            this.ShowVenuesButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ShowVenuesButton.UseVisualStyleBackColor = false;
-            // 
-            // CommitteeIDComboBox
-            // 
-            this.CommitteeIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CommitteeIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CommitteeIDComboBox.FormattingEnabled = true;
-            this.CommitteeIDComboBox.Location = new System.Drawing.Point(153, 426);
-            this.CommitteeIDComboBox.Name = "CommitteeIDComboBox";
-            this.CommitteeIDComboBox.Size = new System.Drawing.Size(138, 26);
-            this.CommitteeIDComboBox.TabIndex = 27;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(25, 430);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 23);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Committee ID:";
-            // 
-            // VenueIDComboBox
-            // 
-            this.VenueIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VenueIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VenueIDComboBox.FormattingEnabled = true;
-            this.VenueIDComboBox.Location = new System.Drawing.Point(153, 374);
-            this.VenueIDComboBox.Name = "VenueIDComboBox";
-            this.VenueIDComboBox.Size = new System.Drawing.Size(137, 26);
-            this.VenueIDComboBox.TabIndex = 26;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(62, 377);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 23);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Venue ID:";
-            // 
             // Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1400, 850);
+            this.ClientSize = new System.Drawing.Size(1401, 881);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.DataGrid);
@@ -653,6 +673,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Events";
             this.Text = "Events";
+            this.Load += new System.EventHandler(this.Events_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ButtonsPanel.ResumeLayout(false);
@@ -690,7 +711,7 @@
         private System.Windows.Forms.ComboBox ITECIDComboBox;
         private System.Windows.Forms.Label ITECIDLabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label ParticipantErrorLabel;
+        private System.Windows.Forms.Label IDErrorLabel;
         private System.Windows.Forms.Label ErrorLabel;
         private System.Windows.Forms.Label EventIDLabel;
         private System.Windows.Forms.TextBox NameTextBox;
@@ -698,7 +719,7 @@
         private System.Windows.Forms.TextBox IDTextBox;
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.DateTimePicker DatePicker;
-        private System.Windows.Forms.TextBox LocationTextBox;
+        private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.Button SearchCommitteeID;
         private System.Windows.Forms.Button SearchVenueID;
         private System.Windows.Forms.Button ShowCommitteesButton;

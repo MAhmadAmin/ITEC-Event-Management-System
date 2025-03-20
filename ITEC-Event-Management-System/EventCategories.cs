@@ -19,6 +19,7 @@ namespace ITEC_Event_Management_System
         {
             InitializeComponent();
         }
+
         private bool IsNumeric(string input)
         {
             return int.TryParse(input, out _);

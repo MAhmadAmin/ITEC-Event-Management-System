@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.DataPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.YearErrorLabel = new System.Windows.Forms.Label();
             this.IDErrorLabel = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
@@ -51,9 +54,6 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.RetrieveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.DataPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.ButtonsPanel.SuspendLayout();
@@ -77,11 +77,47 @@
             this.DataPanel.Controls.Add(this.IDTextBox);
             this.DataPanel.Controls.Add(this.DescriptionLabel);
             this.DataPanel.Controls.Add(this.ThemeLabel);
-            this.DataPanel.Location = new System.Drawing.Point(102, 145);
+            this.DataPanel.Location = new System.Drawing.Point(176, 145);
             this.DataPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DataPanel.Name = "DataPanel";
             this.DataPanel.Size = new System.Drawing.Size(463, 310);
             this.DataPanel.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Location = new System.Drawing.Point(436, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 25);
+            this.button2.TabIndex = 27;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(436, 145);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 25);
+            this.button1.TabIndex = 26;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.Location = new System.Drawing.Point(436, 96);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(24, 25);
+            this.button6.TabIndex = 25;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // YearErrorLabel
             // 
@@ -259,7 +295,7 @@
             this.ITECEditionsHeading.AutoSize = true;
             this.ITECEditionsHeading.Font = new System.Drawing.Font("Product Sans Black", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ITECEditionsHeading.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.ITECEditionsHeading.Location = new System.Drawing.Point(456, 37);
+            this.ITECEditionsHeading.Location = new System.Drawing.Point(530, 37);
             this.ITECEditionsHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ITECEditionsHeading.Name = "ITECEditionsHeading";
             this.ITECEditionsHeading.Size = new System.Drawing.Size(272, 51);
@@ -273,7 +309,7 @@
             this.DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DataGrid.Location = new System.Drawing.Point(669, 97);
+            this.DataGrid.Location = new System.Drawing.Point(743, 97);
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.Size = new System.Drawing.Size(519, 638);
             this.DataGrid.TabIndex = 9;
@@ -289,7 +325,7 @@
             this.ButtonsPanel.Controls.Add(this.UpdateButton);
             this.ButtonsPanel.Controls.Add(this.RetrieveButton);
             this.ButtonsPanel.Controls.Add(this.AddButton);
-            this.ButtonsPanel.Location = new System.Drawing.Point(102, 496);
+            this.ButtonsPanel.Location = new System.Drawing.Point(176, 496);
             this.ButtonsPanel.Name = "ButtonsPanel";
             this.ButtonsPanel.Size = new System.Drawing.Size(496, 210);
             this.ButtonsPanel.TabIndex = 8;
@@ -393,51 +429,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 95);
+            this.panel1.Size = new System.Drawing.Size(1349, 95);
             this.panel1.TabIndex = 10;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(436, 96);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(24, 25);
-            this.button6.TabIndex = 25;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(436, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 25);
-            this.button1.TabIndex = 26;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(436, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 25);
-            this.button2.TabIndex = 27;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ITECEditions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1200, 850);
+            this.ClientSize = new System.Drawing.Size(1349, 850);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.DataGrid);
