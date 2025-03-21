@@ -137,6 +137,8 @@
     <Compile Include="BL\EventCategory.cs" />
     <Compile Include="BL\ITECEdition.cs" />
     <Compile Include="BL\Sponsor.cs" />
+    <Compile Include="BL\Team.cs" />
+    <Compile Include="BL\TeamParticipant.cs" />
     <Compile Include="BL\Venue.cs" />
     <Compile Include="CommitteesAndMembers.cs">
       <SubType>Form</SubType>

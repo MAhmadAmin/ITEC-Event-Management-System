@@ -150,7 +150,7 @@
             this.VenueAllocationButton.ForeColor = System.Drawing.Color.White;
             this.VenueAllocationButton.Image = global::ITEC_Event_Management_System.Properties.Resources.AllocationIcon;
             this.VenueAllocationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.VenueAllocationButton.Location = new System.Drawing.Point(6, 329);
+            this.VenueAllocationButton.Location = new System.Drawing.Point(6, 330);
             this.VenueAllocationButton.Name = "VenueAllocationButton";
             this.VenueAllocationButton.Size = new System.Drawing.Size(217, 33);
             this.VenueAllocationButton.TabIndex = 9;
