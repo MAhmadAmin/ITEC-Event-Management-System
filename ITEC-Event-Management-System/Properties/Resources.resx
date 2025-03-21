@@ -163,8 +163,14 @@
   <data name="Events" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Events.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SearchIconThickOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SearchIconThickOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GentleManAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GentleManAdmin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AllocationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AllocationIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TeamAndParticipantsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamAndParticipantsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UET" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,13 +178,13 @@
   <data name="AdminTeamWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdminTeamWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GentleManAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GentleManAdmin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SearchIconThickOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchIconThickOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ParticipantIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ParticipantIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AllocationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AllocationIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TeamAndParticipantsIconNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamAndParticipantsIconNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

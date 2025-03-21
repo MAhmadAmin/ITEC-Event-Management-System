@@ -61,21 +61,21 @@
             this.MemberAddButton = new System.Windows.Forms.Button();
             this.MemberDataGrid = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.RoleIDSearch = new System.Windows.Forms.Button();
+            this.MemberShowAllRoles = new System.Windows.Forms.Button();
+            this.RoleIDComboBox = new System.Windows.Forms.ComboBox();
+            this.RoleIDLabel = new System.Windows.Forms.Label();
             this.CommitteeIDSearch = new System.Windows.Forms.Button();
             this.MemberNameSearch = new System.Windows.Forms.Button();
             this.MemberShowAllCommittees = new System.Windows.Forms.Button();
             this.CommitteeIDComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.MemberNameTextBox = new System.Windows.Forms.TextBox();
+            this.MemberNameLabel = new System.Windows.Forms.Label();
             this.MemberIDErrorLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.MemberIDLabel = new System.Windows.Forms.Label();
-            this.MemberNameTextBox = new System.Windows.Forms.TextBox();
-            this.MemberNameLabel = new System.Windows.Forms.Label();
             this.MemberIDTextBox = new System.Windows.Forms.TextBox();
-            this.RoleIDSearch = new System.Windows.Forms.Button();
-            this.MemberShowAllRoles = new System.Windows.Forms.Button();
-            this.RoleIDComboBox = new System.Windows.Forms.ComboBox();
-            this.RoleIDLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
@@ -573,6 +573,59 @@
             this.panel3.Size = new System.Drawing.Size(499, 194);
             this.panel3.TabIndex = 23;
             // 
+            // RoleIDSearch
+            // 
+            this.RoleIDSearch.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
+            this.RoleIDSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RoleIDSearch.FlatAppearance.BorderSize = 0;
+            this.RoleIDSearch.Location = new System.Drawing.Point(447, 149);
+            this.RoleIDSearch.Name = "RoleIDSearch";
+            this.RoleIDSearch.Size = new System.Drawing.Size(24, 25);
+            this.RoleIDSearch.TabIndex = 27;
+            this.RoleIDSearch.UseVisualStyleBackColor = true;
+            this.RoleIDSearch.Click += new System.EventHandler(this.RoleIDSearch_Click);
+            // 
+            // MemberShowAllRoles
+            // 
+            this.MemberShowAllRoles.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.MemberShowAllRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemberShowAllRoles.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemberShowAllRoles.ForeColor = System.Drawing.Color.Transparent;
+            this.MemberShowAllRoles.Location = new System.Drawing.Point(295, 147);
+            this.MemberShowAllRoles.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MemberShowAllRoles.Name = "MemberShowAllRoles";
+            this.MemberShowAllRoles.Size = new System.Drawing.Size(130, 27);
+            this.MemberShowAllRoles.TabIndex = 26;
+            this.MemberShowAllRoles.Text = "Show Roles";
+            this.MemberShowAllRoles.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.MemberShowAllRoles.UseVisualStyleBackColor = false;
+            this.MemberShowAllRoles.Click += new System.EventHandler(this.MemberShowAllRoles_Click);
+            // 
+            // RoleIDComboBox
+            // 
+            this.RoleIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RoleIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleIDComboBox.FormattingEnabled = true;
+            this.RoleIDComboBox.Location = new System.Drawing.Point(153, 148);
+            this.RoleIDComboBox.Name = "RoleIDComboBox";
+            this.RoleIDComboBox.Size = new System.Drawing.Size(137, 26);
+            this.RoleIDComboBox.TabIndex = 24;
+            // 
+            // RoleIDLabel
+            // 
+            this.RoleIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RoleIDLabel.AutoSize = true;
+            this.RoleIDLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleIDLabel.ForeColor = System.Drawing.Color.Black;
+            this.RoleIDLabel.Location = new System.Drawing.Point(76, 151);
+            this.RoleIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RoleIDLabel.Name = "RoleIDLabel";
+            this.RoleIDLabel.Size = new System.Drawing.Size(72, 23);
+            this.RoleIDLabel.TabIndex = 25;
+            this.RoleIDLabel.Text = "Role ID:";
+            // 
             // CommitteeIDSearch
             // 
             this.CommitteeIDSearch.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
@@ -639,6 +692,31 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Committee ID:";
             // 
+            // MemberNameTextBox
+            // 
+            this.MemberNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemberNameTextBox.Location = new System.Drawing.Point(153, 108);
+            this.MemberNameTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.MemberNameTextBox.Name = "MemberNameTextBox";
+            this.MemberNameTextBox.Size = new System.Drawing.Size(278, 24);
+            this.MemberNameTextBox.TabIndex = 0;
+            this.MemberNameTextBox.TextChanged += new System.EventHandler(this.MemberNameTextBox_TextChanged);
+            // 
+            // MemberNameLabel
+            // 
+            this.MemberNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MemberNameLabel.AutoSize = true;
+            this.MemberNameLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemberNameLabel.ForeColor = System.Drawing.Color.Black;
+            this.MemberNameLabel.Location = new System.Drawing.Point(10, 109);
+            this.MemberNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.MemberNameLabel.Name = "MemberNameLabel";
+            this.MemberNameLabel.Size = new System.Drawing.Size(139, 23);
+            this.MemberNameLabel.TabIndex = 0;
+            this.MemberNameLabel.Text = "Member Name*";
+            // 
             // MemberIDErrorLabel
             // 
             this.MemberIDErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -685,31 +763,6 @@
             this.MemberIDLabel.TabIndex = 0;
             this.MemberIDLabel.Text = "Member ID:";
             // 
-            // MemberNameTextBox
-            // 
-            this.MemberNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberNameTextBox.Location = new System.Drawing.Point(153, 108);
-            this.MemberNameTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.MemberNameTextBox.Name = "MemberNameTextBox";
-            this.MemberNameTextBox.Size = new System.Drawing.Size(278, 24);
-            this.MemberNameTextBox.TabIndex = 0;
-            this.MemberNameTextBox.TextChanged += new System.EventHandler(this.MemberNameTextBox_TextChanged);
-            // 
-            // MemberNameLabel
-            // 
-            this.MemberNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MemberNameLabel.AutoSize = true;
-            this.MemberNameLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberNameLabel.ForeColor = System.Drawing.Color.Black;
-            this.MemberNameLabel.Location = new System.Drawing.Point(10, 109);
-            this.MemberNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MemberNameLabel.Name = "MemberNameLabel";
-            this.MemberNameLabel.Size = new System.Drawing.Size(139, 23);
-            this.MemberNameLabel.TabIndex = 0;
-            this.MemberNameLabel.Text = "Member Name*";
-            // 
             // MemberIDTextBox
             // 
             this.MemberIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -724,59 +777,6 @@
             this.MemberIDTextBox.Click += new System.EventHandler(this.MemberIDTextBox_Click);
             this.MemberIDTextBox.TextChanged += new System.EventHandler(this.MemberIDTextBox_TextChanged);
             this.MemberIDTextBox.Leave += new System.EventHandler(this.MemberIDTextBox_Leave);
-            // 
-            // RoleIDSearch
-            // 
-            this.RoleIDSearch.BackgroundImage = global::ITEC_Event_Management_System.Properties.Resources.SearchIconThickOrange;
-            this.RoleIDSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.RoleIDSearch.FlatAppearance.BorderSize = 0;
-            this.RoleIDSearch.Location = new System.Drawing.Point(447, 149);
-            this.RoleIDSearch.Name = "RoleIDSearch";
-            this.RoleIDSearch.Size = new System.Drawing.Size(24, 25);
-            this.RoleIDSearch.TabIndex = 27;
-            this.RoleIDSearch.UseVisualStyleBackColor = true;
-            this.RoleIDSearch.Click += new System.EventHandler(this.RoleIDSearch_Click);
-            // 
-            // MemberShowAllRoles
-            // 
-            this.MemberShowAllRoles.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.MemberShowAllRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemberShowAllRoles.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberShowAllRoles.ForeColor = System.Drawing.Color.Transparent;
-            this.MemberShowAllRoles.Location = new System.Drawing.Point(295, 147);
-            this.MemberShowAllRoles.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MemberShowAllRoles.Name = "MemberShowAllRoles";
-            this.MemberShowAllRoles.Size = new System.Drawing.Size(130, 27);
-            this.MemberShowAllRoles.TabIndex = 26;
-            this.MemberShowAllRoles.Text = "Show Roles";
-            this.MemberShowAllRoles.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.MemberShowAllRoles.UseVisualStyleBackColor = false;
-            this.MemberShowAllRoles.Click += new System.EventHandler(this.MemberShowAllRoles_Click);
-            // 
-            // RoleIDComboBox
-            // 
-            this.RoleIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RoleIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleIDComboBox.FormattingEnabled = true;
-            this.RoleIDComboBox.Location = new System.Drawing.Point(153, 148);
-            this.RoleIDComboBox.Name = "RoleIDComboBox";
-            this.RoleIDComboBox.Size = new System.Drawing.Size(137, 26);
-            this.RoleIDComboBox.TabIndex = 24;
-            // 
-            // RoleIDLabel
-            // 
-            this.RoleIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RoleIDLabel.AutoSize = true;
-            this.RoleIDLabel.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleIDLabel.ForeColor = System.Drawing.Color.Black;
-            this.RoleIDLabel.Location = new System.Drawing.Point(76, 151);
-            this.RoleIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RoleIDLabel.Name = "RoleIDLabel";
-            this.RoleIDLabel.Size = new System.Drawing.Size(72, 23);
-            this.RoleIDLabel.TabIndex = 25;
-            this.RoleIDLabel.Text = "Role ID:";
             // 
             // label3
             // 
@@ -810,6 +810,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CommitteesAndMembers";
             this.Text = "CommitteesAndMembers";
+            this.Load += new System.EventHandler(this.CommitteesAndMembers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ButtonsPanel.ResumeLayout(false);

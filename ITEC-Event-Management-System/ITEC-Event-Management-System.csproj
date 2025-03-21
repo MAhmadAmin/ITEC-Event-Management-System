@@ -136,6 +136,7 @@
     <Compile Include="BL\CommitteeMember.cs" />
     <Compile Include="BL\EventCategory.cs" />
     <Compile Include="BL\ITECEdition.cs" />
+    <Compile Include="BL\Participant.cs" />
     <Compile Include="BL\Sponsor.cs" />
     <Compile Include="BL\Team.cs" />
     <Compile Include="BL\TeamParticipant.cs" />
@@ -153,8 +154,11 @@
     <Compile Include="DL\EventCategoryDL.cs" />
     <Compile Include="DL\EventDL.cs" />
     <Compile Include="DL\ITECEditionsDL.cs" />
+    <Compile Include="DL\ParticipantDL.cs" />
     <Compile Include="DL\SponsorDL.cs" />
     <Compile Include="BL\VenueAllocation.cs" />
+    <Compile Include="DL\TeamDL.cs" />
+    <Compile Include="DL\TeamParticipantDL.cs" />
     <Compile Include="DL\VenueAllocationDL.cs" />
     <Compile Include="DL\VenueDL.cs" />
     <Compile Include="EventCategories.cs">
@@ -202,6 +206,12 @@
     </Compile>
     <Compile Include="Sponsors.Designer.cs">
       <DependentUpon>Sponsors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamsAndParticipants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamsAndParticipants.Designer.cs">
+      <DependentUpon>TeamsAndParticipants.cs</DependentUpon>
     </Compile>
     <Compile Include="VenueAllocations.cs">
       <SubType>Form</SubType>
@@ -251,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sponsors.resx">
       <DependentUpon>Sponsors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamsAndParticipants.resx">
+      <DependentUpon>TeamsAndParticipants.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VenueAllocations.resx">
       <DependentUpon>VenueAllocations.cs</DependentUpon>
@@ -348,6 +361,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AllocationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamAndParticipantsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamAndParticipantsIconNew.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

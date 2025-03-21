@@ -807,5 +807,10 @@ namespace ITEC_Event_Management_System
             MemberDataGrid.Refresh();
             isOtherDataTable2 = false;
         }
+
+        private void CommitteesAndMembers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
