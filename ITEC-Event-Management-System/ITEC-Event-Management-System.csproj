@@ -152,6 +152,8 @@
     <Compile Include="DL\EventDL.cs" />
     <Compile Include="DL\ITECEditionsDL.cs" />
     <Compile Include="DL\SponsorDL.cs" />
+    <Compile Include="BL\VenueAllocation.cs" />
+    <Compile Include="DL\VenueAllocationDL.cs" />
     <Compile Include="DL\VenueDL.cs" />
     <Compile Include="EventCategories.cs">
       <SubType>Form</SubType>
@@ -199,6 +201,12 @@
     <Compile Include="Sponsors.Designer.cs">
       <DependentUpon>Sponsors.cs</DependentUpon>
     </Compile>
+    <Compile Include="VenueAllocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VenueAllocations.Designer.cs">
+      <DependentUpon>VenueAllocations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Venues.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,9 +250,13 @@
     <EmbeddedResource Include="Sponsors.resx">
       <DependentUpon>Sponsors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VenueAllocations.resx">
+      <DependentUpon>VenueAllocations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venues.resx">
       <DependentUpon>Venues.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DL\.editorconfig" />
     <None Include="ITEC-Event-Management-System_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -331,6 +343,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EventCategory23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AllocationIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
