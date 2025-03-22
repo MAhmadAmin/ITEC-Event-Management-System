@@ -25,13 +25,13 @@ namespace ITEC_Event_Management_System
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            LoadForm(new Sponsors());
-            ShowActive(SponsorsButton);
+            LoadForm(new Duties());
+            ShowActive(DutiesButton);
         }
 
         private void UpdateButtons()
         {
-            var buttons = new List<Button> {ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton, EventCategoriesButton, VenueAllocationButton, TeamsAndParticipantsButton};
+            var buttons = new List<Button> {ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton, EventCategoriesButton, VenueAllocationButton, TeamsAndParticipantsButton, DutiesButton};
             foreach (var button in buttons)
             {
                 button.BackColor = nonActiveColor;
@@ -121,6 +121,12 @@ namespace ITEC_Event_Management_System
         {
             ShowActive(TeamsAndParticipantsButton);
             LoadForm(new TeamsAndParticipants());
+        }
+
+        private void DutiesButton_Click(object sender, EventArgs e)
+        {
+            ShowActive(DutiesButton);
+            LoadForm(new Duties());
         }
     }
 }

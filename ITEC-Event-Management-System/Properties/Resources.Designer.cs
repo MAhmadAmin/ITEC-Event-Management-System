@@ -93,6 +93,26 @@ namespace ITEC_Event_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DutiesIconNew {
+            get {
+                object obj = ResourceManager.GetObject("DutiesIconNew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DutyIcon {
+            get {
+                object obj = ResourceManager.GetObject("DutyIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EventCategory {
             get {
                 object obj = ResourceManager.GetObject("EventCategory", resourceCulture);
@@ -206,6 +226,16 @@ namespace ITEC_Event_Management_System.Properties {
         internal static System.Drawing.Bitmap ParticipantIcon {
             get {
                 object obj = ResourceManager.GetObject("ParticipantIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ParticipantsIconNew {
+            get {
+                object obj = ResourceManager.GetObject("ParticipantsIconNew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

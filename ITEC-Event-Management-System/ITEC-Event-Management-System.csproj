@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="BL\Committee.cs" />
     <Compile Include="BL\CommitteeMember.cs" />
+    <Compile Include="BL\Duty.cs" />
     <Compile Include="BL\EventCategory.cs" />
     <Compile Include="BL\ITECEdition.cs" />
     <Compile Include="BL\Participant.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="DL\CommitteeDL.cs" />
     <Compile Include="DL\CommitteeMemberDL.cs" />
     <Compile Include="BL\Event.cs" />
+    <Compile Include="DL\DutyDL.cs" />
     <Compile Include="DL\EventCategoryDL.cs" />
     <Compile Include="DL\EventDL.cs" />
     <Compile Include="DL\ITECEditionsDL.cs" />
@@ -163,6 +165,12 @@
     <Compile Include="DL\VendorDL.cs" />
     <Compile Include="DL\VenueAllocationDL.cs" />
     <Compile Include="DL\VenueDL.cs" />
+    <Compile Include="Duties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Duties.Designer.cs">
+      <DependentUpon>Duties.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventCategories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommitteesAndMembers.resx">
       <DependentUpon>CommitteesAndMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duties.resx">
+      <DependentUpon>Duties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventCategories.resx">
       <DependentUpon>EventCategories.cs</DependentUpon>
@@ -369,6 +380,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TeamAndParticipantsIconNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DutyIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DutiesIconNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParticipantsIconNew.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
