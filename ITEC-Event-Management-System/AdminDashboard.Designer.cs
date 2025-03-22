@@ -30,12 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.HowdyLabel = new System.Windows.Forms.Label();
-            this.LogoutButton = new System.Windows.Forms.Button();
             this.SidePanelButtonsPanel = new System.Windows.Forms.Panel();
+            this.HowdyImageBox = new System.Windows.Forms.Panel();
+            this.AdminPanelHeadning = new System.Windows.Forms.Label();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.EventResultsButton = new System.Windows.Forms.Button();
             this.EventParticipantsButton = new System.Windows.Forms.Button();
             this.DutiesButton = new System.Windows.Forms.Button();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.TeamsAndParticipantsButton = new System.Windows.Forms.Button();
             this.VenueAllocationButton = new System.Windows.Forms.Button();
             this.EventCategoriesButton = new System.Windows.Forms.Button();
@@ -46,14 +50,11 @@
             this.EventsButton = new System.Windows.Forms.Button();
             this.ITECEditionsButton = new System.Windows.Forms.Button();
             this.AdminPictureBox = new System.Windows.Forms.PictureBox();
-            this.HowdyImageBox = new System.Windows.Forms.Panel();
-            this.AdminPanelHeadning = new System.Windows.Forms.Label();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SidePanelButtonsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).BeginInit();
             this.HowdyImageBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -69,18 +70,6 @@
             this.SidePanel.Size = new System.Drawing.Size(224, 961);
             this.SidePanel.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::ITEC_Event_Management_System.Properties.Resources.WavingHand;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 54);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // HowdyLabel
             // 
             this.HowdyLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -94,27 +83,10 @@
             this.HowdyLabel.TabIndex = 4;
             this.HowdyLabel.Text = "Howdy";
             // 
-            // LogoutButton
-            // 
-            this.LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LogoutButton.FlatAppearance.BorderSize = 0;
-            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutButton.ForeColor = System.Drawing.Color.White;
-            this.LogoutButton.Image = global::ITEC_Event_Management_System.Properties.Resources.LogoutIcon;
-            this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(38, 661);
-            this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(129, 31);
-            this.LogoutButton.TabIndex = 3;
-            this.LogoutButton.Text = "Log out";
-            this.LogoutButton.UseVisualStyleBackColor = true;
-            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
-            // 
             // SidePanelButtonsPanel
             // 
             this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SidePanelButtonsPanel.Controls.Add(this.EventResultsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.EventParticipantsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.DutiesButton);
             this.SidePanelButtonsPanel.Controls.Add(this.LogoutButton);
@@ -131,6 +103,68 @@
             this.SidePanelButtonsPanel.Name = "SidePanelButtonsPanel";
             this.SidePanelButtonsPanel.Size = new System.Drawing.Size(224, 695);
             this.SidePanelButtonsPanel.TabIndex = 0;
+            // 
+            // HowdyImageBox
+            // 
+            this.HowdyImageBox.BackColor = System.Drawing.Color.Indigo;
+            this.HowdyImageBox.Controls.Add(this.AdminPanelHeadning);
+            this.HowdyImageBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HowdyImageBox.Location = new System.Drawing.Point(224, 0);
+            this.HowdyImageBox.Name = "HowdyImageBox";
+            this.HowdyImageBox.Size = new System.Drawing.Size(1680, 87);
+            this.HowdyImageBox.TabIndex = 1;
+            // 
+            // AdminPanelHeadning
+            // 
+            this.AdminPanelHeadning.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AdminPanelHeadning.AutoSize = true;
+            this.AdminPanelHeadning.Font = new System.Drawing.Font("Arial Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminPanelHeadning.ForeColor = System.Drawing.Color.Transparent;
+            this.AdminPanelHeadning.Location = new System.Drawing.Point(565, 19);
+            this.AdminPanelHeadning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AdminPanelHeadning.Name = "AdminPanelHeadning";
+            this.AdminPanelHeadning.Size = new System.Drawing.Size(445, 54);
+            this.AdminPanelHeadning.TabIndex = 1;
+            this.AdminPanelHeadning.Text = "<-- ADMIN PANEL -->";
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(224, 87);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1680, 874);
+            this.MainPanel.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::ITEC_Event_Management_System.Properties.Resources.WavingHand;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 54);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // EventResultsButton
+            // 
+            this.EventResultsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EventResultsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EventResultsButton.FlatAppearance.BorderSize = 0;
+            this.EventResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EventResultsButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventResultsButton.ForeColor = System.Drawing.Color.White;
+            this.EventResultsButton.Image = global::ITEC_Event_Management_System.Properties.Resources.EventResultIcon;
+            this.EventResultsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EventResultsButton.Location = new System.Drawing.Point(7, 537);
+            this.EventResultsButton.Name = "EventResultsButton";
+            this.EventResultsButton.Size = new System.Drawing.Size(217, 31);
+            this.EventResultsButton.TabIndex = 13;
+            this.EventResultsButton.Text = "         Event Results";
+            this.EventResultsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EventResultsButton.UseVisualStyleBackColor = true;
+            this.EventResultsButton.Click += new System.EventHandler(this.EventResultsButton_Click);
             // 
             // EventParticipantsButton
             // 
@@ -169,6 +203,24 @@
             this.DutiesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DutiesButton.UseVisualStyleBackColor = true;
             this.DutiesButton.Click += new System.EventHandler(this.DutiesButton_Click);
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogoutButton.FlatAppearance.BorderSize = 0;
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutButton.ForeColor = System.Drawing.Color.White;
+            this.LogoutButton.Image = global::ITEC_Event_Management_System.Properties.Resources.LogoutIcon;
+            this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutButton.Location = new System.Drawing.Point(38, 661);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(129, 31);
+            this.LogoutButton.TabIndex = 3;
+            this.LogoutButton.Text = "Log out";
+            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // TeamsAndParticipantsButton
             // 
@@ -354,37 +406,6 @@
             this.AdminPictureBox.TabIndex = 1;
             this.AdminPictureBox.TabStop = false;
             // 
-            // HowdyImageBox
-            // 
-            this.HowdyImageBox.BackColor = System.Drawing.Color.Indigo;
-            this.HowdyImageBox.Controls.Add(this.AdminPanelHeadning);
-            this.HowdyImageBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HowdyImageBox.Location = new System.Drawing.Point(224, 0);
-            this.HowdyImageBox.Name = "HowdyImageBox";
-            this.HowdyImageBox.Size = new System.Drawing.Size(1680, 87);
-            this.HowdyImageBox.TabIndex = 1;
-            // 
-            // AdminPanelHeadning
-            // 
-            this.AdminPanelHeadning.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AdminPanelHeadning.AutoSize = true;
-            this.AdminPanelHeadning.Font = new System.Drawing.Font("Arial Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminPanelHeadning.ForeColor = System.Drawing.Color.Transparent;
-            this.AdminPanelHeadning.Location = new System.Drawing.Point(565, 19);
-            this.AdminPanelHeadning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AdminPanelHeadning.Name = "AdminPanelHeadning";
-            this.AdminPanelHeadning.Size = new System.Drawing.Size(445, 54);
-            this.AdminPanelHeadning.TabIndex = 1;
-            this.AdminPanelHeadning.Text = "<-- ADMIN PANEL -->";
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(224, 87);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1680, 874);
-            this.MainPanel.TabIndex = 2;
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,11 +423,11 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.SidePanel.ResumeLayout(false);
             this.SidePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.SidePanelButtonsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).EndInit();
             this.HowdyImageBox.ResumeLayout(false);
             this.HowdyImageBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,5 +454,6 @@
         private System.Windows.Forms.Button SponsorsButton;
         private System.Windows.Forms.Button DutiesButton;
         private System.Windows.Forms.Button EventParticipantsButton;
+        private System.Windows.Forms.Button EventResultsButton;
     }
 }

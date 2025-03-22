@@ -137,6 +137,7 @@
     <Compile Include="BL\Duty.cs" />
     <Compile Include="BL\EventCategory.cs" />
     <Compile Include="BL\EventParticipant.cs" />
+    <Compile Include="BL\EventResult.cs" />
     <Compile Include="BL\ITECEdition.cs" />
     <Compile Include="BL\Participant.cs" />
     <Compile Include="BL\Sponsor.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="DL\EventCategoryDL.cs" />
     <Compile Include="DL\EventDL.cs" />
     <Compile Include="DL\EventParticipantDL.cs" />
+    <Compile Include="DL\EventResultDL.cs" />
     <Compile Include="DL\ITECEditionsDL.cs" />
     <Compile Include="DL\ParticipantDL.cs" />
     <Compile Include="DL\SponsorDL.cs" />
@@ -184,6 +186,12 @@
     </Compile>
     <Compile Include="EventParticipants.Designer.cs">
       <DependentUpon>EventParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventResults.Designer.cs">
+      <DependentUpon>EventResults.cs</DependentUpon>
     </Compile>
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
@@ -257,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventParticipants.resx">
       <DependentUpon>EventParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventResults.resx">
+      <DependentUpon>EventResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>
@@ -403,6 +414,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EvnetParticipantsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EventResultIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
