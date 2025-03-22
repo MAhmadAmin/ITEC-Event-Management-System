@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using ITEC_Event_Management_System.BL;
 using ITEC_Event_Management_System.DL;
@@ -19,7 +20,6 @@ namespace ITEC_Event_Management_System
         public Sponsors()
         {
             InitializeComponent();
-            UpdateButtons();
         }
 
         private bool IsNumeric(string input)
@@ -50,7 +50,7 @@ namespace ITEC_Event_Management_System
                 AddButton.BackColor = Color.Gray;
             }
 
-            if (IDTextBox.Text != "" && IDTextBox.Text != "auto increment" && IsNumeric(IDTextBox.Text))
+            if (IDTextBox.Text != "" && IDTextBox.Text != "auto increment" && IsNumeric(IDTextBox.Text) && (IsValidPhoneNumber(ContactTextBox.Text) || string.IsNullOrEmpty(ContactTextBox.Text)))
             {
                 DeleteButton.Enabled = true;
                 DeleteButton.ForeColor = Color.White;
@@ -323,6 +323,291 @@ namespace ITEC_Event_Management_System
                 DataGrid.DataSource = dt;
                 DataGrid.Refresh();
             }
+        }
+
+        private void UpdateVendorButtons()
+        {
+            VendorSuccessLabel.Text = "None";
+            VendorSuccessLabel.ForeColor = Color.Green;
+            if ((VendorIDTextBox.Text == "auto increment" || VendorIDTextBox.Text == "") && VendorNameTextBox.Text != "" && (IsValidPhoneNumber(VendorContactTextBox.Text) || string.IsNullOrEmpty(VendorContactTextBox.Text)))
+            {
+                VendorAddButton.Enabled = true;
+                VendorAddButton.ForeColor = Color.White;
+                VendorAddButton.BackColor = Color.ForestGreen;
+            }
+            else
+            {
+
+                VendorAddButton.Enabled = false;
+                VendorAddButton.BackColor = Color.Gray;
+            }
+
+            if (VendorIDTextBox.Text != "" && VendorIDTextBox.Text != "auto increment" && IsNumeric(VendorIDTextBox.Text))
+            {
+                VendorDeleteButton.Enabled = true;
+                VendorDeleteButton.ForeColor = Color.White;
+                VendorDeleteButton.BackColor = Color.Brown;
+
+                VendorRetrieveButton.Enabled = true;
+                VendorRetrieveButton.BackColor = Color.Peru;
+            }
+            else
+            {
+                VendorDeleteButton.Enabled = false;
+                VendorDeleteButton.BackColor = Color.Gray;
+
+                VendorRetrieveButton.Enabled = false;
+                VendorRetrieveButton.BackColor = Color.Gray;
+            }
+
+            if (VendorIDTextBox.Text != "" && VendorIDTextBox.Text != "auto increment" && IsNumeric(VendorIDTextBox.Text) && (IsValidPhoneNumber(VendorContactTextBox.Text) || string.IsNullOrEmpty(VendorContactTextBox.Text)))
+            {
+                VendorUpdateButton.Enabled = true;
+                VendorUpdateButton.BackColor = Color.RoyalBlue;
+            }
+            else
+            {
+                VendorUpdateButton.Enabled = false;
+                VendorUpdateButton.BackColor = Color.Gray;
+            }
+        }
+
+        private void Sponsors_Load(object sender, EventArgs e)
+        {
+            UpdateButtons();
+            UpdateVendorButtons();
+        }
+
+        private void VendorIDTextBox_Click(object sender, EventArgs e)
+        {
+            if (VendorIDTextBox.Text == "auto increment")
+                VendorIDTextBox.Text = "";
+            VendorIDTextBox.ForeColor = Color.Black;
+            VendorIDTextBox.Font = new Font(VendorIDTextBox.Font, FontStyle.Regular);
+        }
+
+        private void VendorIDTextBox_Leave(object sender, EventArgs e)
+        {
+            if (VendorIDTextBox.Text == "")
+            {
+                VendorIDTextBox.Text = "auto increment";
+                VendorIDTextBox.Font = new Font(VendorIDTextBox.Font, FontStyle.Italic);
+                VendorIDTextBox.ForeColor = Color.Gray;
+                VendorIDErrorLabel.Hide();
+            }
+            UpdateVendorButtons();
+        }
+
+        private void VendorIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateVendorButtons();
+
+            if (!IsNumeric(VendorIDTextBox.Text) && VendorIDTextBox.Text != "")
+                VendorIDErrorLabel.Show();
+            else
+                VendorIDErrorLabel.Hide();
+        }
+
+        private void VendorNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateVendorButtons();
+        }
+
+        private void VendorContactTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!IsValidPhoneNumber(VendorContactTextBox.Text) && VendorContactTextBox.Text != "")
+                VendorContactErrorLabel.Show();
+            else
+                VendorContactErrorLabel.Hide();
+            UpdateVendorButtons();
+        }
+
+        private void VendorShowAllButton_Click(object sender, EventArgs e)
+        {
+            List<Vendor> vendors = VendorDL.GetAllVendors();
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("ID");
+            dataTable.Columns.Add("Name");
+            dataTable.Columns.Add("Contact");
+            dataTable.Columns.Add("Service Type");
+
+            foreach(Vendor vendor in vendors)
+            {
+                string contact = string.IsNullOrEmpty(vendor.Contact) ? "NULL" : vendor.Contact;
+                string serviceType = string.IsNullOrEmpty(vendor.Servicetype) ? "NULL" : vendor.Servicetype;
+
+                dataTable.Rows.Add(vendor.ID.ToString(), vendor.Name.ToString(), contact, serviceType);
+            }
+
+            VendorDataGrid.DataSource = dataTable;
+            VendorDataGrid.Refresh();
+        }
+
+        private void VendorAddButton_Click(object sender, EventArgs e)
+        {
+            string contact = string.IsNullOrWhiteSpace(VendorContactTextBox.Text) ? null : VendorContactTextBox.Text;
+            string serviceType = string.IsNullOrWhiteSpace(VendorServiceTextBox.Text) ? null : VendorServiceTextBox.Text;
+
+            int result = VendorDL.StoreVendor(new Vendor(-1, VendorNameTextBox.Text, contact, serviceType));
+            if(result == 1)
+            {
+                VendorSuccessLabel.Text = "Vendor Added Successfully";
+                VendorSuccessLabel.ForeColor = Color.Green;
+                VendorShowAllButton.PerformClick();
+            }
+            else
+            {
+                VendorSuccessLabel.Text = "Failed To Add vendor";
+                VendorSuccessLabel.ForeColor = Color.Red;
+            }
+        }
+
+        private void VendorRetrieveButton_Click(object sender, EventArgs e)
+        {
+            Vendor vendor = VendorDL.GetVendorByID(int.Parse(VendorIDTextBox.Text));
+            if(vendor == null)
+            {
+                MessageBox.Show("Vendor Not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Name");
+                dataTable.Columns.Add("Contact");
+                dataTable.Columns.Add("Service Type");
+
+                    string contact = string.IsNullOrEmpty(vendor.Contact) ? "NULL" : vendor.Contact;
+                    string serviceType = string.IsNullOrEmpty(vendor.Servicetype) ? "NULL" : vendor.Servicetype;
+
+                    dataTable.Rows.Add(vendor.ID.ToString(), vendor.Name.ToString(), contact, serviceType);
+                VendorDataGrid.DataSource = dataTable;
+                VendorDataGrid.Refresh();
+            }
+        }
+
+        private void VendorDeleteButton_Click(object sender, EventArgs e)
+        {
+            int result = VendorDL.DeleteVendor(int.Parse(VendorIDTextBox.Text));
+
+            if(result == 1)
+            {
+                VendorSuccessLabel.Text = "Vendor Deleted Successfully";
+                VendorSuccessLabel.ForeColor = Color.Green;
+                VendorShowAllButton.PerformClick();
+            }
+            else
+            {
+                VendorSuccessLabel.Text = "Failed To Delete vendor";
+                VendorSuccessLabel.ForeColor = Color.Red;
+            }
+        }
+
+        private void VendorUpdateButton_Click(object sender, EventArgs e)
+        {
+            string contact = string.IsNullOrWhiteSpace(VendorContactTextBox.Text) ? null : VendorContactTextBox.Text;
+            string serviceType = string.IsNullOrWhiteSpace(VendorServiceTextBox.Text) ? null : VendorServiceTextBox.Text;
+
+            int result = VendorDL.UpdateVendor(new Vendor(int.Parse(VendorIDTextBox.Text), VendorNameTextBox.Text, contact, serviceType));
+
+            if(result == 1)
+            {
+                VendorSuccessLabel.Text = "Vendor Updated Successfully";
+                VendorSuccessLabel.ForeColor = Color.Green;
+                VendorShowAllButton.PerformClick();
+            }
+            else if(result == -1)
+            {
+                VendorSuccessLabel.Text = "Vendor not found";
+                VendorSuccessLabel.ForeColor = Color.Red;
+            }
+            else
+            {
+                VendorSuccessLabel.Text = "Failed To Update vendor";
+                VendorSuccessLabel.ForeColor = Color.Red;
+            }
+        }
+
+        private void SearchVendorName_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(VendorNameTextBox.Text))
+            {
+                MessageBox.Show("Please Enter a Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                List<Vendor> vendors = VendorDL.GetVendorsByNameLike(NameTextBox.Text);
+
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Name");
+                dataTable.Columns.Add("Contact");
+                dataTable.Columns.Add("Service Type");
+
+                foreach (Vendor vendor in vendors)
+                {
+                    string contact = string.IsNullOrEmpty(vendor.Contact) ? "NULL" : vendor.Contact;
+                    string serviceType = string.IsNullOrEmpty(vendor.Servicetype) ? "NULL" : vendor.Servicetype;
+
+                    dataTable.Rows.Add(vendor.ID.ToString(), vendor.Name.ToString(), contact, serviceType);
+                }
+
+                VendorDataGrid.DataSource = dataTable;
+                VendorDataGrid.Refresh();
+            }
+        }
+
+        private void SearchVendorContact_Click(object sender, EventArgs e)
+        {
+            List<Vendor> vendors = new List<Vendor>();
+            if (string.IsNullOrEmpty(VendorContactTextBox.Text))
+                vendors = VendorDL.GetVendorsByNullContact();
+            else
+                vendors = VendorDL.GetVendorsByContactLike(VendorContactTextBox.Text);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("ID");
+            dataTable.Columns.Add("Name");
+            dataTable.Columns.Add("Contact");
+            dataTable.Columns.Add("Service Type");
+
+            foreach (Vendor vendor in vendors)
+            {
+                string contact = string.IsNullOrEmpty(vendor.Contact) ? "NULL" : vendor.Contact;
+                string serviceType = string.IsNullOrEmpty(vendor.Servicetype) ? "NULL" : vendor.Servicetype;
+
+                dataTable.Rows.Add(vendor.ID.ToString(), vendor.Name.ToString(), contact, serviceType);
+            }
+
+            VendorDataGrid.DataSource = dataTable;
+            VendorDataGrid.Refresh();
+        }
+
+        private void SearchVendorService_Click(object sender, EventArgs e)
+        {
+            List<Vendor> vendors = new List<Vendor> { };
+            if (string.IsNullOrWhiteSpace(VendorServiceTextBox.Text))
+                vendors = VendorDL.GetVendorsByNullService();
+            else
+                vendors = VendorDL.GetVendorsByServiceLike(VendorServiceTextBox.Text);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("ID");
+            dataTable.Columns.Add("Name");
+            dataTable.Columns.Add("Contact");
+            dataTable.Columns.Add("Service Type");
+
+            foreach (Vendor vendor in vendors)
+            {
+                string contact = string.IsNullOrEmpty(vendor.Contact) ? "NULL" : vendor.Contact;
+                string serviceType = string.IsNullOrEmpty(vendor.Servicetype) ? "NULL" : vendor.Servicetype;
+
+                dataTable.Rows.Add(vendor.ID.ToString(), vendor.Name.ToString(), contact, serviceType);
+            }
+
+            VendorDataGrid.DataSource = dataTable;
+            VendorDataGrid.Refresh();
         }
     }
 }

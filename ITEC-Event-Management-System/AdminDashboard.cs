@@ -25,8 +25,8 @@ namespace ITEC_Event_Management_System
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            LoadForm(new TeamsAndParticipants());
-            ShowActive(TeamsAndParticipantsButton);
+            LoadForm(new Sponsors());
+            ShowActive(SponsorsButton);
         }
 
         private void UpdateButtons()

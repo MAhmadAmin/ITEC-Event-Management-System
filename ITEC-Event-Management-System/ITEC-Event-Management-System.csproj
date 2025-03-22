@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\ahmad\Desktop\Soft\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -140,6 +140,7 @@
     <Compile Include="BL\Sponsor.cs" />
     <Compile Include="BL\Team.cs" />
     <Compile Include="BL\TeamParticipant.cs" />
+    <Compile Include="BL\Vendor.cs" />
     <Compile Include="BL\Venue.cs" />
     <Compile Include="CommitteesAndMembers.cs">
       <SubType>Form</SubType>
@@ -159,6 +160,7 @@
     <Compile Include="BL\VenueAllocation.cs" />
     <Compile Include="DL\TeamDL.cs" />
     <Compile Include="DL\TeamParticipantDL.cs" />
+    <Compile Include="DL\VendorDL.cs" />
     <Compile Include="DL\VenueAllocationDL.cs" />
     <Compile Include="DL\VenueDL.cs" />
     <Compile Include="EventCategories.cs">
