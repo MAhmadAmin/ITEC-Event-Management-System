@@ -36,6 +36,7 @@
             this.AdminPanelHeadning = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ReportsButton = new System.Windows.Forms.Button();
             this.FinancesButton = new System.Windows.Forms.Button();
             this.EventResultsButton = new System.Windows.Forms.Button();
             this.EventParticipantsButton = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@
             // SidePanelButtonsPanel
             // 
             this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SidePanelButtonsPanel.Controls.Add(this.ReportsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.FinancesButton);
             this.SidePanelButtonsPanel.Controls.Add(this.EventResultsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.EventParticipantsButton);
@@ -148,6 +150,25 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            // 
+            // ReportsButton
+            // 
+            this.ReportsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReportsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ReportsButton.FlatAppearance.BorderSize = 0;
+            this.ReportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReportsButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportsButton.ForeColor = System.Drawing.Color.White;
+            this.ReportsButton.Image = global::ITEC_Event_Management_System.Properties.Resources.ReportIcon;
+            this.ReportsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportsButton.Location = new System.Drawing.Point(4, 633);
+            this.ReportsButton.Name = "ReportsButton";
+            this.ReportsButton.Size = new System.Drawing.Size(217, 31);
+            this.ReportsButton.TabIndex = 15;
+            this.ReportsButton.Text = "         Reports";
+            this.ReportsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportsButton.UseVisualStyleBackColor = true;
+            this.ReportsButton.Click += new System.EventHandler(this.ReportsButton_Click);
             // 
             // FinancesButton
             // 
@@ -477,5 +498,6 @@
         private System.Windows.Forms.Button EventParticipantsButton;
         private System.Windows.Forms.Button EventResultsButton;
         private System.Windows.Forms.Button FinancesButton;
+        private System.Windows.Forms.Button ReportsButton;
     }
 }

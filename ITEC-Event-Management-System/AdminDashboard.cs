@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ITEC_Event_Management_System.Reports;
 
 namespace ITEC_Event_Management_System
 {
@@ -25,13 +26,13 @@ namespace ITEC_Event_Management_System
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            LoadForm(new Finances());
-            ShowActive(FinancesButton);
+            LoadForm(new ReportsPanel());
+            ShowActive(ReportsButton);
         }
 
         private void UpdateButtons()
         {
-            var buttons = new List<Button> {ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton, EventCategoriesButton, VenueAllocationButton, TeamsAndParticipantsButton, DutiesButton, EventParticipantsButton, EventResultsButton, FinancesButton};
+            var buttons = new List<Button> {ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton, EventCategoriesButton, VenueAllocationButton, TeamsAndParticipantsButton, DutiesButton, EventParticipantsButton, EventResultsButton, FinancesButton, ReportsButton};
             foreach (var button in buttons)
             {
                 button.BackColor = nonActiveColor;
@@ -145,6 +146,12 @@ namespace ITEC_Event_Management_System
         {
             ShowActive(FinancesButton);
             LoadForm(new Finances());
+        }
+
+        private void ReportsButton_Click(object sender, EventArgs e)
+        {
+            ShowActive(ReportsButton);
+            LoadForm(new ReportsPanel());
         }
     }
 }

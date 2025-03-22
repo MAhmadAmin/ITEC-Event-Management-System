@@ -31,12 +31,22 @@ namespace ITEC_Event_Management_System
 			ITECIDComboBox.SelectedIndex = 0;
 
 
-			List<Lookup> lookups = LookupDataLayer.GetIDsByCategory("ParticipantRoles");
-            RoleIDComboBox.Items.Add("None");
-			foreach (Lookup lookup in lookups)
+			//List<Lookup> lookups = LookupDataLayer.GetIDsByCategory("ParticipantRoles");
+			//         RoleIDComboBox.Items.Add("None");
+			//foreach (Lookup lookup in lookups)
+			//{
+			//	RoleIDComboBox.Items.Add(lookup.ID);
+			//         }
+			//RoleIDComboBox.SelectedIndex = 0;
+
+			RoleIDComboBox.Items.Clear();
+			RoleIDComboBox.Items.Add("None");
+			string query = "SELECT * FROM Roles";
+			var reader = DatabaseHelper.Instance.getData(query);
+			while(reader.Read())
 			{
-				RoleIDComboBox.Items.Add(lookup.ID);
-            }
+				RoleIDComboBox.Items.Add(reader.GetInt16("role_id"));
+			}
 			RoleIDComboBox.SelectedIndex = 0;
 
 			UpdateButtons();
@@ -60,34 +70,34 @@ namespace ITEC_Event_Management_System
 		private void ShowRolesButton_Click(object sender, EventArgs e)
 		{
 
-            List<Lookup> lookups = LookupDataLayer.GetIDsByCategory("ParticipantRoles");
+            //List<Lookup> lookups = LookupDataLayer.GetIDsByCategory("ParticipantRoles");
 
-            DataTable dt = new DataTable();
-            dt.Columns.Add("ID", typeof(int));
-            dt.Columns.Add("Category", typeof(string));
-            dt.Columns.Add("Value", typeof(string));
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("ID", typeof(int));
+            //dt.Columns.Add("Category", typeof(string));
+            //dt.Columns.Add("Value", typeof(string));
 
-            foreach (var lookup in lookups)
-            {
-                dt.Rows.Add(lookup.ID, lookup.category, lookup.value);
-            }
+            //foreach (var lookup in lookups)
+            //{
+            //    dt.Rows.Add(lookup.ID, lookup.category, lookup.value);
+            //}
 
-            DataGrid.DataSource = dt;
-            DataGrid.Refresh();
+            //DataGrid.DataSource = dt;
+            //DataGrid.Refresh();
             isOtherDataTable = true;
 
-   //         string query = "SELECT * FROM roles";
-			//var reader = DatabaseHelper.Instance.getData(query);
+            string query = "SELECT * FROM roles";
+			var reader = DatabaseHelper.Instance.getData(query);
 
-			//MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
-			//DataTable dt = new DataTable();
-			//DataAdapter.Fill(dt);
+			MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query, DatabaseHelper.Instance.getConnection());
+			DataTable dt = new DataTable();
+			DataAdapter.Fill(dt);
 
-			//DataGrid.DataSource = dt;
-			//DataGrid.Refresh();
-			//reader.Close();
+			DataGrid.DataSource = dt;
+			DataGrid.Refresh();
+			reader.Close();
 
-			//isOtherDataTable = true;
+			isOtherDataTable = true;
 		}
 
 		private bool IsNumeric(string input)
