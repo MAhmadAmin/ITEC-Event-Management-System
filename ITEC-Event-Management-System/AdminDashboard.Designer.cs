@@ -36,6 +36,7 @@
             this.AdminPanelHeadning = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.FinancesButton = new System.Windows.Forms.Button();
             this.EventResultsButton = new System.Windows.Forms.Button();
             this.EventParticipantsButton = new System.Windows.Forms.Button();
             this.DutiesButton = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             // SidePanelButtonsPanel
             // 
             this.SidePanelButtonsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SidePanelButtonsPanel.Controls.Add(this.FinancesButton);
             this.SidePanelButtonsPanel.Controls.Add(this.EventResultsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.EventParticipantsButton);
             this.SidePanelButtonsPanel.Controls.Add(this.DutiesButton);
@@ -146,6 +148,25 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            // 
+            // FinancesButton
+            // 
+            this.FinancesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FinancesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FinancesButton.FlatAppearance.BorderSize = 0;
+            this.FinancesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinancesButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinancesButton.ForeColor = System.Drawing.Color.White;
+            this.FinancesButton.Image = global::ITEC_Event_Management_System.Properties.Resources.FinancesIcon;
+            this.FinancesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FinancesButton.Location = new System.Drawing.Point(7, 585);
+            this.FinancesButton.Name = "FinancesButton";
+            this.FinancesButton.Size = new System.Drawing.Size(217, 31);
+            this.FinancesButton.TabIndex = 14;
+            this.FinancesButton.Text = "         Finances";
+            this.FinancesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FinancesButton.UseVisualStyleBackColor = true;
+            this.FinancesButton.Click += new System.EventHandler(this.FinancesButton_Click);
             // 
             // EventResultsButton
             // 
@@ -455,5 +476,6 @@
         private System.Windows.Forms.Button DutiesButton;
         private System.Windows.Forms.Button EventParticipantsButton;
         private System.Windows.Forms.Button EventResultsButton;
+        private System.Windows.Forms.Button FinancesButton;
     }
 }

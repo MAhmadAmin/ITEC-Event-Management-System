@@ -138,6 +138,7 @@
     <Compile Include="BL\EventCategory.cs" />
     <Compile Include="BL\EventParticipant.cs" />
     <Compile Include="BL\EventResult.cs" />
+    <Compile Include="BL\Finance.cs" />
     <Compile Include="BL\ITECEdition.cs" />
     <Compile Include="BL\Participant.cs" />
     <Compile Include="BL\Sponsor.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="DL\EventDL.cs" />
     <Compile Include="DL\EventParticipantDL.cs" />
     <Compile Include="DL\EventResultDL.cs" />
+    <Compile Include="DL\FinanceDL.cs" />
     <Compile Include="DL\ITECEditionsDL.cs" />
     <Compile Include="DL\ParticipantDL.cs" />
     <Compile Include="DL\SponsorDL.cs" />
@@ -198,6 +200,12 @@
     </Compile>
     <Compile Include="Events.Designer.cs">
       <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances.Designer.cs">
+      <DependentUpon>Finances.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -271,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances.resx">
+      <DependentUpon>Finances.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -417,6 +428,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EventResultIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinancesIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
