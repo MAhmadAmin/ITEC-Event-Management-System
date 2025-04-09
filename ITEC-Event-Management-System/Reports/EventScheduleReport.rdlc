@@ -9,10 +9,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Participants</Value>
+                <Value>Event Schedule</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontFamily>Arial Black</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <Color>MidnightBlue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -22,10 +23,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.26458cm</Top>
-        <Left>9.9187cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.34667cm</Width>
+        <Top>0.3175cm</Top>
+        <Left>9.49537cm</Left>
+        <Height>0.99688cm</Height>
+        <Width>8.42667cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -40,30 +41,27 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.07503cm</Width>
+              <Width>1.89618cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.9115cm</Width>
+              <Width>4.72722cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.33639cm</Width>
+              <Width>3.65535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.15491cm</Width>
+              <Width>3.34667cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.68899cm</Width>
+              <Width>5.09734cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73649cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.76295cm</Width>
+              <Width>7.8975cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.73229cm</Height>
+              <Height>0.82021cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -74,10 +72,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID</Value>
+                              <Value>Event ID</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>ExtraBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -109,10 +107,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Name</Value>
+                              <Value>Event Name</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>ExtraBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -144,10 +142,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Email</Value>
+                              <Value>Date</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>ExtraBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -179,10 +177,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Contact</Value>
+                              <Value>Time</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>ExtraBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -214,10 +212,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Institute</Value>
+                              <Value>Venue</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>ExtraBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -249,10 +247,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ITEC ID</Value>
+                              <Value>Location</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>ExtraBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -275,63 +273,28 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox14">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Role ID</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.73229cm</Height>
+              <Height>1.08479cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ID">
+                    <Textbox Name="EventID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID.Value</Value>
+                              <Value>=Fields!EventID.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ID</rd:DefaultName>
+                      <rd:DefaultName>EventID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -347,21 +310,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="name">
+                    <Textbox Name="EventName">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!name.Value</Value>
+                              <Value>=Fields!EventName.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>name</rd:DefaultName>
+                      <rd:DefaultName>EventName</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -377,21 +340,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="email">
+                    <Textbox Name="Date">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!email.Value</Value>
+                              <Value>=Fields!Date.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>email</rd:DefaultName>
+                      <rd:DefaultName>Date</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -407,21 +370,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="contact">
+                    <Textbox Name="Time">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!contact.Value</Value>
+                              <Value>=Fields!Time.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>contact</rd:DefaultName>
+                      <rd:DefaultName>Time</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -437,21 +400,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="institute">
+                    <Textbox Name="Venue">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!institute.Value</Value>
+                              <Value>=Fields!Venue.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>institute</rd:DefaultName>
+                      <rd:DefaultName>Venue</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -467,51 +430,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ITECID">
+                    <Textbox Name="Location">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ITECID.Value</Value>
+                              <Value>=Fields!Location.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ITECID</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="roleID">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!roleID.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>roleID</rd:DefaultName>
+                      <rd:DefaultName>Location</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -537,7 +470,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -550,11 +482,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ParticipantsDataset</DataSetName>
-        <Top>1.6637cm</Top>
-        <Left>0.40787cm</Left>
-        <Height>1.46458cm</Height>
-        <Width>21.66626cm</Width>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>2.06057cm</Top>
+        <Left>0.36724cm</Left>
+        <Height>1.905cm</Height>
+        <Width>26.62026cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -563,10 +495,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.19792in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>8.93018in</Width>
+  <Width>10.625in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -584,59 +516,48 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0e1edee4-2f3e-43c7-b441-106da2d0a647</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="ITEC_Event_Management_SystemReports1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>023dde83-7b08-4930-a17a-1abe98c3f42f</rd:DataSourceID>
+      <rd:DataSourceID>1afe455d-d609-46fa-a563-dcc43a059de6</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ParticipantsDataset">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>ITEC_Event_Management_SystemReports1</DataSourceName>
+        <DataSourceName>ITEC_Event_Management_SystemReports</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="contact">
-          <DataField>contact</DataField>
+        <Field Name="Date">
+          <DataField>Date</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="email">
-          <DataField>email</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ID">
-          <DataField>ID</DataField>
+        <Field Name="EventID">
+          <DataField>EventID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="institute">
-          <DataField>institute</DataField>
+        <Field Name="EventName">
+          <DataField>EventName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ITECID">
-          <DataField>ITECID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="name">
-          <DataField>name</DataField>
+        <Field Name="Location">
+          <DataField>Location</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="roleID">
-          <DataField>roleID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Time">
+          <DataField>Time</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Venue">
+          <DataField>Venue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>ITEC_Event_Management_System.Reports</rd:DataSetName>
-        <rd:TableName>ParticipantClass</rd:TableName>
-        <rd:ObjectDataSourceType>ITEC_Event_Management_System.Reports.ParticipantClass, ITEC-Event-Management-System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>EventScheduleDataClass</rd:TableName>
+        <rd:ObjectDataSourceType>ITEC_Event_Management_System.Reports.EventScheduleDataClass, ITEC-Event-Management-System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>72311247-fed0-4199-8b33-33a18af5fb0b</rd:ReportID>
+  <rd:ReportID>1e2e0920-31e4-4c0b-8154-99d9e7064c19</rd:ReportID>
 </Report>

@@ -9,23 +9,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Participants</Value>
+                <Value>Committee Assignment Report</Value>
                 <Style>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.26458cm</Top>
-        <Left>9.9187cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>3.34667cm</Width>
+        <Top>0.31432cm</Top>
+        <Left>10.34203cm</Left>
+        <Height>0.89104cm</Height>
+        <Width>8.16208cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -40,30 +38,30 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.07503cm</Width>
+              <Width>2.28424cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.9115cm</Width>
+              <Width>4.46294cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.33639cm</Width>
+              <Width>2.60174cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.15491cm</Width>
+              <Width>2.94067cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.68899cm</Width>
+              <Width>7.76991cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73649cm</Width>
+              <Width>3.66417cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.76295cm</Width>
+              <Width>4.32563cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.73229cm</Height>
+              <Height>1.08479cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -74,9 +72,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID</Value>
+                              <Value>Committee ID</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -109,7 +107,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Name</Value>
+                              <Value>Committee Name</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -144,7 +142,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Email</Value>
+                              <Value>Duty ID</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -179,7 +177,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Contact</Value>
+                              <Value>Assigned To</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -214,7 +212,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Institute</Value>
+                              <Value>Task Description</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -249,7 +247,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ITEC ID</Value>
+                              <Value>Deadline</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -284,7 +282,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Role ID</Value>
+                              <Value>Status</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -313,25 +311,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.73229cm</Height>
+              <Height>1.24354cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ID">
+                    <Textbox Name="committeeID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID.Value</Value>
+                              <Value>=Fields!committeeID.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ID</rd:DefaultName>
+                      <rd:DefaultName>committeeID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -347,21 +345,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="name">
+                    <Textbox Name="committeeName">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!name.Value</Value>
+                              <Value>=Fields!committeeName.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>name</rd:DefaultName>
+                      <rd:DefaultName>committeeName</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -377,21 +375,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="email">
+                    <Textbox Name="dutyID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!email.Value</Value>
+                              <Value>=Fields!dutyID.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>email</rd:DefaultName>
+                      <rd:DefaultName>dutyID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -407,21 +405,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="contact">
+                    <Textbox Name="assignedTo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!contact.Value</Value>
+                              <Value>=Fields!assignedTo.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>contact</rd:DefaultName>
+                      <rd:DefaultName>assignedTo</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -437,21 +435,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="institute">
+                    <Textbox Name="taskDescription">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!institute.Value</Value>
+                              <Value>=Fields!taskDescription.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>institute</rd:DefaultName>
+                      <rd:DefaultName>taskDescription</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -467,21 +465,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ITECID">
+                    <Textbox Name="deadline">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ITECID.Value</Value>
+                              <Value>=Fields!deadline.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ITECID</rd:DefaultName>
+                      <rd:DefaultName>deadline</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -497,21 +495,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="roleID">
+                    <Textbox Name="status">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!roleID.Value</Value>
+                              <Value>=Fields!status.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>roleID</rd:DefaultName>
+                      <rd:DefaultName>status</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -550,11 +548,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ParticipantsDataset</DataSetName>
-        <Top>1.6637cm</Top>
-        <Left>0.40787cm</Left>
-        <Height>1.46458cm</Height>
-        <Width>21.66626cm</Width>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.71662cm</Top>
+        <Left>0.32315cm</Left>
+        <Height>2.32833cm</Height>
+        <Width>28.0493cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -563,10 +561,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.19792in</Height>
+    <Height>5.14583in</Height>
     <Style />
   </Body>
-  <Width>8.93018in</Width>
+  <Width>11.36458in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -584,59 +582,52 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0e1edee4-2f3e-43c7-b441-106da2d0a647</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="ITEC_Event_Management_SystemReports1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>023dde83-7b08-4930-a17a-1abe98c3f42f</rd:DataSourceID>
+      <rd:DataSourceID>c9664152-96cd-428c-817b-3dad1114a1da</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ParticipantsDataset">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>ITEC_Event_Management_SystemReports1</DataSourceName>
+        <DataSourceName>ITEC_Event_Management_SystemReports</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="contact">
-          <DataField>contact</DataField>
+        <Field Name="assignedTo">
+          <DataField>assignedTo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="email">
-          <DataField>email</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ID">
-          <DataField>ID</DataField>
+        <Field Name="committeeID">
+          <DataField>committeeID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="institute">
-          <DataField>institute</DataField>
+        <Field Name="committeeName">
+          <DataField>committeeName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ITECID">
-          <DataField>ITECID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="name">
-          <DataField>name</DataField>
+        <Field Name="deadline">
+          <DataField>deadline</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="roleID">
-          <DataField>roleID</DataField>
+        <Field Name="dutyID">
+          <DataField>dutyID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="status">
+          <DataField>status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="taskDescription">
+          <DataField>taskDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>ITEC_Event_Management_System.Reports</rd:DataSetName>
-        <rd:TableName>ParticipantClass</rd:TableName>
-        <rd:ObjectDataSourceType>ITEC_Event_Management_System.Reports.ParticipantClass, ITEC-Event-Management-System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>CommitteeAssignmentDataClass</rd:TableName>
+        <rd:ObjectDataSourceType>ITEC_Event_Management_System.Reports.CommitteeAssignmentDataClass, ITEC-Event-Management-System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>72311247-fed0-4199-8b33-33a18af5fb0b</rd:ReportID>
+  <rd:ReportID>b76971a6-943c-4886-9559-9989fb2b586f</rd:ReportID>
 </Report>

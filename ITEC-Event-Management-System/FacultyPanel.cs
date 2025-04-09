@@ -7,39 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ITEC_Event_Management_System.Reports;
 
 namespace ITEC_Event_Management_System
 {
-    public partial class AdminDashboard : Form
+    public partial class FacultyPanel : Form
     {
-        Color nonActiveColor = Color.Indigo;
-        Color ActiveColor = Color.Purple;
-        
-        
+        Color nonActiveColor = Color.MidnightBlue;
+        Color ActiveColor = Color.Navy;
 
-        public AdminDashboard(string username)
+        public FacultyPanel(string username)
         {
             InitializeComponent();
-            HowdyLabel.Text = $"Howdy, {username}!";
-        }
-
-        private void AdminDashboard_Load(object sender, EventArgs e)
-        {
-            //LoadForm(new ReportsPanel());
-            //ShowActive(ReportsButton);
         }
 
         private void UpdateButtons()
         {
-            var buttons = new List<Button> {ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton, EventCategoriesButton, VenueAllocationButton, TeamsAndParticipantsButton, DutiesButton, EventParticipantsButton, EventResultsButton, FinancesButton, ReportsButton};
+            var buttons = new List<Button> { ITECEditionsButton, EventsButton, VenuesButton, ParticipantsButton, CommitteeAndMembersButton, SponsorsButton, EventCategoriesButton, VenueAllocationButton, TeamsAndParticipantsButton, DutiesButton, EventParticipantsButton, EventResultsButton, FinancesButton, ReportsButton };
             foreach (var button in buttons)
             {
                 button.BackColor = nonActiveColor;
             }
         }
 
-        private void ShowActive (Button button)
+        private void ShowActive(Button button)
         {
             UpdateButtons();
             button.BackColor = ActiveColor;
@@ -154,9 +144,10 @@ namespace ITEC_Event_Management_System
             LoadForm(new ReportsPanel());
         }
 
-        private void SidePanel_Paint(object sender, PaintEventArgs e)
+        private void ParticipantsButton_Click(object sender, EventArgs e)
         {
-
+            ShowActive(ParticipantsButton);
+            LoadForm(new Participants());
         }
     }
 }

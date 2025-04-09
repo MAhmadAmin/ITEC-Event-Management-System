@@ -33,5 +33,20 @@ namespace ITEC_Event_Management_System
         {
             LoadForm(new ParticipantsForm());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadForm(new CommitteeAssignmentReportForm());
+        }
+
+        private void IncomeandExpensesButton_Click(object sender, EventArgs e)
+        {
+            LoadForm(new IncomeAndExpensesForm());
+        }
+
+        private void EventSchedulesButton_Click(object sender, EventArgs e)
+        {
+            LoadForm(new EventScheduleForm());
+        }
     }
 }

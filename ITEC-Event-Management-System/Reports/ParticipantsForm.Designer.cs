@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.participantClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.RetrieveButton = new System.Windows.Forms.Button();
             this.ITECIDLabel = new System.Windows.Forms.Label();
@@ -44,19 +45,22 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.EventsHeading = new System.Windows.Forms.Label();
-            this.participantClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.participantClassBindingSource1)).BeginInit();
             this.DataPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.participantClassBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // participantClassBindingSource1
+            // 
+            this.participantClassBindingSource1.DataSource = typeof(ITEC_Event_Management_System.Reports.ParticipantClass);
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "ParticipantsDataset";
-            reportDataSource1.Value = this.participantClassBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "ParticipantsDataset";
+            reportDataSource2.Value = this.participantClassBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ITEC_Event_Management_System.Reports.ParticipantsReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(518, 137);
+            this.reportViewer1.Location = new System.Drawing.Point(519, 102);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1018, 625);
@@ -241,10 +245,6 @@
             this.EventsHeading.Text = "Participants Report";
             this.EventsHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // participantClassBindingSource1
-            // 
-            this.participantClassBindingSource1.DataSource = typeof(ITEC_Event_Management_System.Reports.ParticipantClass);
-            // 
             // ParticipantsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,11 +257,11 @@
             this.Name = "ParticipantsForm";
             this.Text = "ParticipantsForm";
             this.Load += new System.EventHandler(this.ParticipantsForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.participantClassBindingSource1)).EndInit();
             this.DataPanel.ResumeLayout(false);
             this.DataPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.participantClassBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

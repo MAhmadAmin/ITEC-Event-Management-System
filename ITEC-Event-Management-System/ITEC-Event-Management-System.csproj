@@ -219,6 +219,12 @@
     <Compile Include="Events.Designer.cs">
       <DependentUpon>Events.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacultyPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyPanel.Designer.cs">
+      <DependentUpon>FacultyPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finances.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,30 @@
     <Compile Include="ReportsPanel.Designer.cs">
       <DependentUpon>ReportsPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\CommitteeAssignmentDataClass.cs" />
+    <Compile Include="Reports\CommitteeAssignmentDL.cs" />
+    <Compile Include="Reports\CommitteeAssignmentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CommitteeAssignmentReportForm.Designer.cs">
+      <DependentUpon>CommitteeAssignmentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EventScheduleDataClass.cs" />
+    <Compile Include="Reports\EventScheduleDL.cs" />
+    <Compile Include="Reports\EventScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EventScheduleForm.Designer.cs">
+      <DependentUpon>EventScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IncomeAndExpenceDataClass.cs" />
+    <Compile Include="Reports\IncomeAndExpenceDL.cs" />
+    <Compile Include="Reports\IncomeAndExpensesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\IncomeAndExpensesForm.Designer.cs">
+      <DependentUpon>IncomeAndExpensesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ParticipantClass.cs" />
     <Compile Include="Reports\ParticipantsForm.cs">
       <SubType>Form</SubType>
@@ -274,6 +304,12 @@
       <DependentUpon>Sponsors.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StudentParticipantPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentParticipantPanel.Designer.cs">
+      <DependentUpon>StudentParticipantPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamsAndParticipants.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +349,9 @@
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacultyPanel.resx">
+      <DependentUpon>FacultyPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Finances.resx">
       <DependentUpon>Finances.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +377,18 @@
     <EmbeddedResource Include="ReportsPanel.resx">
       <DependentUpon>ReportsPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CommitteeAssignmentReportForm.resx">
+      <DependentUpon>CommitteeAssignmentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CommitteeAssignReport.rdlc" />
+    <EmbeddedResource Include="Reports\EventScheduleForm.resx">
+      <DependentUpon>EventScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EventScheduleReport.rdlc" />
+    <EmbeddedResource Include="Reports\IncomeAndExpenseReport.rdlc" />
+    <EmbeddedResource Include="Reports\IncomeAndExpensesForm.resx">
+      <DependentUpon>IncomeAndExpensesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ParticipantsForm.resx">
       <DependentUpon>ParticipantsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sponsors.resx">
       <DependentUpon>Sponsors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentParticipantPanel.resx">
+      <DependentUpon>StudentParticipantPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamsAndParticipants.resx">
       <DependentUpon>TeamsAndParticipants.cs</DependentUpon>
@@ -364,6 +418,10 @@
     <None Include="Properties\DataSources\ITEC_Event_Management_System.BL.Participant.datasource" />
     <None Include="Properties\DataSources\ITEC_Event_Management_System.BL.ParticipantClassReport.datasource" />
     <None Include="Properties\DataSources\ITEC_Event_Management_System.BL.ParticipantForReport.datasource" />
+    <None Include="Properties\DataSources\ITEC_Event_Management_System.Reports.CommitteeAssignmentClass.datasource" />
+    <None Include="Properties\DataSources\ITEC_Event_Management_System.Reports.CommitteeAssignmentDataClass.datasource" />
+    <None Include="Properties\DataSources\ITEC_Event_Management_System.Reports.EventScheduleDataClass.datasource" />
+    <None Include="Properties\DataSources\ITEC_Event_Management_System.Reports.IncomeAndExpenceDataClass.datasource" />
     <None Include="Properties\DataSources\ITEC_Event_Management_System.Reports.ParticipantClass.datasource" />
     <None Include="Properties\DataSources\ITEC_Event_Management_System.Reports.ParticipantClassReport.datasource" />
     <None Include="Properties\Settings.settings">
@@ -480,6 +538,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ReportIcon.png" />
+    <None Include="Resources\network-team-308.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

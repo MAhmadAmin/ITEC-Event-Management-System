@@ -58,11 +58,18 @@ namespace ITEC_Event_Management_System
 						admin.Show();
 						this.Hide();
 					}
-					else if (role == "user")
+					else if (role == "Faculty")
 					{
-						//User user = new User();
-						//user.Show();
-						//this.Hide();
+                        FacultyPanel faculty = new FacultyPanel(reader["username"].ToString());
+                        faculty.Show();
+                        this.Hide();
+                    }
+					else if (role == "Student")
+					{
+						StudentParticipantPanel student = new StudentParticipantPanel(reader["username"].ToString(), reader["email"].ToString());
+
+						student.Show();
+						this.Hide();
 					}
 				}
 				else

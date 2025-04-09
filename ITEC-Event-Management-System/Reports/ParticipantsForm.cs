@@ -23,6 +23,7 @@ namespace ITEC_Event_Management_System.Reports
         {
             UpdateButtons();
             LoadComboBoxes();
+            //this.reportViewer2.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
