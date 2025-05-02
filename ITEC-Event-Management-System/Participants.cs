@@ -218,15 +218,16 @@ namespace ITEC_Event_Management_System
 			{
 				EmailErrorLabel.Hide();
 			}
-			else if (ParticipantIDTextBox.Text != "auto increment" || ParticipantIDTextBox.Text != "")
+            else if (!IsValidEmail(EmailTextBox.Text))
+            {
+                EmailErrorLabel.Text = "Invalid email format";
+                EmailErrorLabel.Show();
+            }
+            else if (ParticipantIDTextBox.Text != "auto increment" || ParticipantIDTextBox.Text != "")
             {
                 EmailErrorLabel.Hide();
             }
-            else if (!IsValidEmail(EmailTextBox.Text))
-			{
-				EmailErrorLabel.Text = "Invalid email format";
-				EmailErrorLabel.Show();
-			}
+            
 			else if (DoesEmailExist(EmailTextBox.Text))
 			{
 				EmailErrorLabel.Text = "Email already exists";
