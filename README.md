@@ -1,4 +1,4 @@
-This is a Project of Database Course Instructed by Sir Nazeef ul Haq at UET Lahore.
+This is a mid-term project of the Database Systems Course instructed by Prof. Nazeef ul Haq at the UET (University of Engineering & Technology) Lahore.
 
 The Information Technology Exhibition and Competition (ITEC) is an annual event organized 
 by the Department of Computer Science, UET Lahore. The event includes various activities 
