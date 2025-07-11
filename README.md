@@ -1,13 +1,28 @@
-This is a mid-term project for the Database Systems Course instructed by Prof. Nazeef ul Haq at the UET (University of Engineering & Technology) Lahore.
+# Event Management System – Mid-Term Project
 
-The Information Technology Exhibition and Competition (ITEC) is an annual event organized 
-by the Department of Computer Science, UET Lahore. The event includes various activities 
-such as competitions, exhibitions, seminars, and non-tech events. It is managed by faculty 
-members and students, with responsibilities distributed across multiple organizing committees.
+This project is a mid-term submission by Muhammad Ahmad Amin for the **Database Systems** course, instructed by Prof. Nazeef ul Haq at **UET (University of Engineering & Technology) Lahore**.
 
-This project is purposed to streamline event management; as it provides a centralized Event Management System to 
-digitize and automate the entire process.
+## Project Context
 
-This is a desktop-based Windows Form Application using C# and MySQL, developed to 
-streamline event planning, participant management, committee roles, financial tracking, and 
-duty assignments.
+The project is inspired by **ITEC (Information Technology Exhibition and Competition)** — an annual event organized by the Department of Computer Science, UET Lahore. ITEC features:
+
+- Tech competitions  
+- Exhibitions  
+- Seminars  
+- Non-tech events
+
+## Purpose
+
+This system aims to **digitize and automate event management** by handling:
+
+- Event scheduling  
+- Participant registration  
+- Committee assignments  
+- Financial tracking  
+- Duty delegation
+
+## Technologies Used
+
+- **Platform:** Windows Forms (C# Desktop Application)  
+- **Language:** C#  
+- **Database:** MySQL
