@@ -23,7 +23,6 @@ The backend is driven primarily by a well-designed relational database — showc
 - **Frontend:** HTML, CSS  
 - **Backend:** C# (Pure OOP)  
 - **Database:** MySQL
-- 
 
 ## Project Context
 
